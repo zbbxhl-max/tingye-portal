@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07100e">
+    <meta
+      name="description"
+      content="庭野智作系统状态说明：V1 为静态展示，不监控 ComfyUI 或其他本地服务运行状态。"
+    >
+    <title>系统状态｜庭野智作</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="shell header__inner">
+        <a class="brand" href="index.html" aria-label="庭野智作首页">
+          <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+          <span class="brand__text">
+            <strong>庭野智作</strong>
+            <small>TINGYE STUDIO</small>
+          </span>
+        </a>
+        <nav class="site-nav" id="site-nav" data-nav aria-label="主导航">
+          <a class="nav__link" href="index.html">首页</a>
+          <a class="nav__link" href="garden.html">庭院设计</a>
+          <a class="nav__link" href="works.html">作品展示</a>
+          <a class="nav__link" href="tools.html">AI 工具</a>
+          <a class="nav__link" href="workflows.html">工作流</a>
+          <a class="nav__link" href="status.html" aria-current="page">系统状态</a>
+          <button class="button button--quiet nav__config-mobile" type="button" data-open-config>
+            配置链接
+          </button>
+        </nav>
+        <div class="header__actions">
+          <button class="config-trigger" type="button" data-open-config>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"></path>
+              <path d="M19 13.4v-2.8l-2-.5a6 6 0 0 0-.7-1.8l1.1-1.8-2-2-1.8 1.1a6 6 0 0 0-1.8-.7L11.3 3H8.5L8 5a6 6 0 0 0-1.8.7L4.4 4.6l-2 2 1.1 1.8a6 6 0 0 0-.7 1.8l-2 .5v2.8l2 .5a6 6 0 0 0 .7 1.8l-1.1 1.8 2 2 1.8-1.1a6 6 0 0 0 1.8.7l.5 2h2.8l.5-2a6 6 0 0 0 1.8-.7l1.8 1.1 2-2-1.1-1.8a6 6 0 0 0 .7-1.8l2-.5Z"></path>
+            </svg>
+            配置链接
+          </button>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="打开导航菜单"
+        >
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="shell">
+          <span class="eyebrow">SYSTEM BOUNDARY / 05</span>
+          <div class="page-hero__grid">
+            <div>
+              <h1>这里只说明<br>门户自身的状态。</h1>
+              <p class="page-hero__lead">
+                V1 没有服务端，也没有连接 ComfyUI、Windows 或任何本地执行器。
+                页面中的数据是内容快照与当前浏览器的链接配置，不是服务器健康监控。
+              </p>
+            </div>
+            <aside class="page-hero__aside">
+              <strong>STATIC BY DESIGN</strong>
+              <p>
+                任何看起来像“运行中”的指示都可能造成误导，因此本版不设置实时在线标记。
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="status-title">
+        <div class="shell">
+          <div class="static-alert">
+            <span class="static-alert__mark" aria-hidden="true">STATIC</span>
+            <div>
+              <h2 id="status-title">静态展示，不是实时监控。</h2>
+              <p>
+                页面不会探测 ComfyUI 是否启动，也不会检查本机端口、远程服务或工作流任务。
+                链接可打开，不代表对应服务正在运行。
+              </p>
+            </div>
+            <span class="static-alert__tag">NO LIVE PROBES</span>
+          </div>
+
+          <div class="section-heading" aria-labelledby="snapshot-title">
+            <div class="section-heading__copy">
+              <span class="eyebrow">SNAPSHOT</span>
+              <h2 id="snapshot-title">当前页面状态。</h2>
+              <p>以下状态不通过网络请求获取，只反映静态内容与本地浏览器的配置。</p>
+            </div>
+          </div>
+
+          <div class="status-board">
+            <article class="status-tile status-tile--accent">
+              <span class="status-tile__label">CONTENT VERSION</span>
+              <strong data-site-version>V1</strong>
+              <p>内容最近更新：<span data-updated-at>2026-10-18</span></p>
+            </article>
+            <article class="status-tile">
+              <span class="status-tile__label">LINK OVERRIDES</span>
+              <strong><span data-configured-count>0</span>/<span data-total-link-count>7</span></strong>
+              <p>当前浏览器中已配置的入口数量。</p>
+            </article>
+            <article class="status-tile">
+              <span class="status-tile__label">LOCAL / LAN LINKS</span>
+              <strong data-local-link-count>0</strong>
+              <p>识别为本机或局域网的入口，仅对应网络内可用。</p>
+            </article>
+            <article class="status-tile">
+              <span class="status-tile__label">LIVE MONITORING</span>
+              <strong>未接入</strong>
+              <p>没有 ComfyUI、Windows 或云服务的健康检查。</p>
+            </article>
+          </div>
+
+          <div class="notice notice--spaced">
+            <span class="notice__icon" aria-hidden="true">i</span>
+            <div>
+              <p data-storage-status>设置会保存在当前浏览器中。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top" id="security" aria-labelledby="security-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div class="section-heading__copy">
+              <span class="eyebrow">SECURITY BOUNDARY</span>
+              <h2 id="security-title">V1 明确不做的五件事。</h2>
+              <p>安全边界是功能定义的一部分，不等到后续接入时再补。</p>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <article class="security-item">
+              <span class="security-item__no">01</span>
+              <h3>不开放远程桌面</h3>
+              <p>Windows 远程桌面不映射到公网，门户也不提供任何远程桌面链接。</p>
+            </article>
+            <article class="security-item">
+              <span class="security-item__no">02</span>
+              <h3>不自动公开 ComfyUI</h3>
+              <p>门户不会修改监听地址、开启端口或绕过本机防火墙。</p>
+            </article>
+            <article class="security-item">
+              <span class="security-item__no">03</span>
+              <h3>不复制知识库</h3>
+              <p>只允许配置入口地址，不在公开仓库或前端中存放整库内容。</p>
+            </article>
+            <article class="security-item">
+              <span class="security-item__no">04</span>
+              <h3>不保存长期密钥</h3>
+              <p>浏览器只保存链接 URL，不接收 API Key、密码或访问令牌。</p>
+            </article>
+            <article class="security-item">
+              <span class="security-item__no">05</span>
+              <h3>不实现未授权控制</h3>
+              <p>远程 AI 服务仅预留入口，不提供未经身份验证的执行接口。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top">
+        <div class="shell">
+          <div class="closing-cta">
+            <div>
+              <h2>需要配置入口，而不是伪造状态。</h2>
+              <p>工具地址可在当前浏览器中设置，未配置的入口会保持明确提示。</p>
+            </div>
+            <div>
+              <button class="button" type="button" data-open-config>配置链接</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+            <div>
+              <h2>庭野智作</h2>
+              <p>景观判断为骨，AI 工作流为器。一个面向设计实践的个人门户。</p>
+            </div>
+          </div>
+          <nav class="footer__nav" aria-label="页脚导航">
+            <a href="index.html">首页</a>
+            <a href="garden.html">庭院设计</a>
+            <a href="works.html">作品展示</a>
+            <a href="tools.html">AI 工具</a>
+            <a href="workflows.html">工作流</a>
+            <a href="garden.html#method">设计方法</a>
+          </nav>
+          <div class="footer__note">
+            <p>
+              本页不保存 API Key、密码或私人文件路径。链接配置只存储在当前浏览器。
+            </p>
+            <button type="button" data-open-config>配置链接 →</button>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-current-year>2026</span> TINGYE STUDIO</span>
+          <span>STATIC <span data-site-version>V1</span> · UPDATED <span data-updated-at>2026-10-18</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07100e">
+    <meta
+      name="description"
+      content="庭野智作作品展示：庭院、景观、建筑与设计研究的概念示例作品。"
+    >
+    <title>作品展示｜庭野智作</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="shell header__inner">
+        <a class="brand" href="index.html" aria-label="庭野智作首页">
+          <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+          <span class="brand__text">
+            <strong>庭野智作</strong>
+            <small>TINGYE STUDIO</small>
+          </span>
+        </a>
+        <nav class="site-nav" id="site-nav" data-nav aria-label="主导航">
+          <a class="nav__link" href="index.html">首页</a>
+          <a class="nav__link" href="garden.html">庭院设计</a>
+          <a class="nav__link" href="works.html" aria-current="page">作品展示</a>
+          <a class="nav__link" href="tools.html">AI 工具</a>
+          <a class="nav__link" href="workflows.html">工作流</a>
+          <a class="nav__link" href="status.html">系统状态</a>
+          <button class="button button--quiet nav__config-mobile" type="button" data-open-config>
+            配置链接
+          </button>
+        </nav>
+        <div class="header__actions">
+          <button class="config-trigger" type="button" data-open-config>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"></path>
+              <path d="M19 13.4v-2.8l-2-.5a6 6 0 0 0-.7-1.8l1.1-1.8-2-2-1.8 1.1a6 6 0 0 0-1.8-.7L11.3 3H8.5L8 5a6 6 0 0 0-1.8.7L4.4 4.6l-2 2 1.1 1.8a6 6 0 0 0-.7 1.8l-2 .5v2.8l2 .5a6 6 0 0 0 .7 1.8l-1.1 1.8 2 2 1.8-1.1a6 6 0 0 0 1.8.7l.5 2h2.8l.5-2a6 6 0 0 0 1.8-.7l1.8 1.1 2-2-1.1-1.8a6 6 0 0 0 .7-1.8l2-.5Z"></path>
+            </svg>
+            配置链接
+          </button>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="打开导航菜单"
+        >
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="shell">
+          <span class="eyebrow">SELECTED WORKS / 02</span>
+          <div class="page-hero__grid">
+            <div>
+              <h1>作品是判断<br>被看见的方式。</h1>
+              <p class="page-hero__lead">
+                这里展示经过筛选的庭院、景观、建筑和设计研究。当前影像为本地概念占位图，
+                用于建立浏览与筛选体验，不冒充已完成项目。
+              </p>
+            </div>
+            <aside class="page-hero__aside">
+              <strong>ASSET NOTE</strong>
+              <p>
+                六张作品图均存放在本地 assets/images/works/，可替换成正式项目图片，
+                同时保留相同画幅与替代文本。
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="gallery-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div class="section-heading__copy">
+              <span class="eyebrow">CONCEPT GALLERY</span>
+              <h2 id="gallery-title">按空间类型筛选。</h2>
+              <p>筛选只改变当前页面的可见作品，不请求服务器。</p>
+            </div>
+          </div>
+
+          <div class="filter-bar" data-filter-bar aria-label="作品分类筛选">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">
+              全部
+            </button>
+            <button class="filter-button" type="button" data-filter="garden" aria-pressed="false">
+              庭院
+            </button>
+            <button class="filter-button" type="button" data-filter="landscape" aria-pressed="false">
+              景观
+            </button>
+            <button class="filter-button" type="button" data-filter="architecture" aria-pressed="false">
+              建筑
+            </button>
+            <button class="filter-button" type="button" data-filter="research" aria-pressed="false">
+              研究
+            </button>
+          </div>
+          <p class="filter-status" data-filter-status aria-live="polite">
+            当前显示 6 个示例作品（全部）。
+          </p>
+
+          <div class="gallery-grid">
+            <article class="work-card" data-category="garden">
+              <figure>
+                <img
+                  src="assets/images/works/garden-courtyard.svg"
+                  alt="灰绿庭院概念图，包含围墙、树冠、步道与圆形水景"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                >
+                <span class="work-card__badge">概念占位</span>
+              </figure>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span>GARDEN / 01</span>
+                  <span>2026</span>
+                </div>
+                <h2>石庭与静水</h2>
+                <p>以低墙、树影和水面组织一个安静的内向庭院。</p>
+                <ul class="tag-list" aria-label="作品标签">
+                  <li>私家庭院</li>
+                  <li>静水</li>
+                  <li>石材</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="garden">
+              <figure>
+                <img
+                  src="assets/images/works/garden-watercourt.svg"
+                  alt="暮色水庭概念图，展示浅水面、汀步与两侧植物"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                >
+                <span class="work-card__badge">概念占位</span>
+              </figure>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span>GARDEN / 02</span>
+                  <span>2026</span>
+                </div>
+                <h2>暮色水庭</h2>
+                <p>用浅水面和连续汀步建立室内外的缓慢过渡。</p>
+                <ul class="tag-list" aria-label="作品标签">
+                  <li>水景</li>
+                  <li>过渡</li>
+                  <li>夜景</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="landscape">
+              <figure>
+                <img
+                  src="assets/images/works/landscape-terrace.svg"
+                  alt="台地景观概念图，用层叠等高线和植被表现坡地空间"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                >
+                <span class="work-card__badge">概念占位</span>
+              </figure>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span>LANDSCAPE / 01</span>
+                  <span>2026</span>
+                </div>
+                <h2>等高线台地</h2>
+                <p>把坡地高差转译成可停留、可观察的层叠空间。</p>
+                <ul class="tag-list" aria-label="作品标签">
+                  <li>地形</li>
+                  <li>坡地</li>
+                  <li>路径</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="landscape">
+              <figure>
+                <img
+                  src="assets/images/works/landscape-threshold.svg"
+                  alt="林地边界概念图，用树阵、空隙和光带表现林缘空间"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                >
+                <span class="work-card__badge">概念占位</span>
+              </figure>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span>LANDSCAPE / 02</span>
+                  <span>2026</span>
+                </div>
+                <h2>林缘的阈值</h2>
+                <p>以疏密变化的树阵建立进入林地的感知边界。</p>
+                <ul class="tag-list" aria-label="作品标签">
+                  <li>林地</li>
+                  <li>边界</li>
+                  <li>光线</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="architecture">
+              <figure>
+                <img
+                  src="assets/images/works/architecture-pavilion.svg"
+                  alt="深色园林亭廊概念图，展示水平屋檐、柱列与庭院倒影"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                >
+                <span class="work-card__badge">概念占位</span>
+              </figure>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span>ARCHITECTURE / 01</span>
+                  <span>2026</span>
+                </div>
+                <h2>水平亭廊</h2>
+                <p>用连续屋檐压低视线，让庭院成为建筑的主要立面。</p>
+                <ul class="tag-list" aria-label="作品标签">
+                  <li>亭廊</li>
+                  <li>屋檐</li>
+                  <li>庭院</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-card" data-category="research">
+              <figure>
+                <img
+                  src="assets/images/works/research-contour.svg"
+                  alt="设计研究概念图，用山体等高线、点阵与尺寸标注构成分析图"
+                  width="1200"
+                  height="900"
+                  loading="lazy"
+                >
+                <span class="work-card__badge">概念占位</span>
+              </figure>
+              <div class="work-card__body">
+                <div class="work-card__meta">
+                  <span>RESEARCH / 01</span>
+                  <span>2026</span>
+                </div>
+                <h2>地形阅读练习</h2>
+                <p>把等高线、坡向和视点标注组合成可比较的场地语言。</p>
+                <ul class="tag-list" aria-label="作品标签">
+                  <li>等高线</li>
+                  <li>场地分析</li>
+                  <li>图解</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top">
+        <div class="shell">
+          <div class="notice">
+            <span class="notice__icon" aria-hidden="true">i</span>
+            <div>
+              <strong>替换为正式作品前，请同步修改图片、替代文本和项目描述。</strong>
+              <p>
+                当前作品名称为内容结构示例。替换流程与图片尺寸说明见项目 README。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+            <div>
+              <h2>庭野智作</h2>
+              <p>景观判断为骨，AI 工作流为器。一个面向设计实践的个人门户。</p>
+            </div>
+          </div>
+          <nav class="footer__nav" aria-label="页脚导航">
+            <a href="index.html">首页</a>
+            <a href="garden.html">庭院设计</a>
+            <a href="tools.html">AI 工具</a>
+            <a href="workflows.html">工作流</a>
+            <a href="status.html">系统状态</a>
+            <a href="garden.html#method">设计方法</a>
+          </nav>
+          <div class="footer__note">
+            <p>
+              本页不保存 API Key、密码或私人文件路径。链接配置只存储在当前浏览器。
+            </p>
+            <button type="button" data-open-config>配置链接 →</button>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-current-year>2026</span> TINGYE STUDIO</span>
+          <span>STATIC <span data-site-version>V1</span> · UPDATED <span data-updated-at>2026-10-18</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

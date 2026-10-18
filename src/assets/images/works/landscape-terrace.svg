@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">等高线台地概念图</title>
+  <desc id="desc">由层叠台地、等高线和植被构成的坡地景观概念图。</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0.72" y2="1">
+      <stop offset="0" stop-color="#1b3228"/>
+      <stop offset="0.5" stop-color="#0e1d17"/>
+      <stop offset="1" stop-color="#07100e"/>
+    </linearGradient>
+    <linearGradient id="slope" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4e6d55" stop-opacity="0.54"/>
+      <stop offset="1" stop-color="#203b2e" stop-opacity="0.2"/>
+    </linearGradient>
+    <pattern id="grid3" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#d8e9cf" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg3)"/>
+  <rect width="1200" height="900" fill="url(#grid3)"/>
+  <g fill="none" stroke="#b7d4a9">
+    <path d="M36 715c112-124 228-177 351-158 120 19 190 99 309 94 114-5 188-79 303-118 54-18 115-22 165-14" stroke-opacity="0.18"/>
+    <path d="M13 749c121-125 243-175 371-153 124 21 198 101 319 94 115-7 195-79 311-115 53-16 107-19 160-10" stroke-opacity="0.15"/>
+    <path d="M-14 787c128-128 257-175 390-150 129 24 207 104 333 94 117-9 200-77 315-110 52-15 102-17 153-7" stroke-opacity="0.13"/>
+    <path d="M-31 829c134-130 271-176 410-148 133 27 215 107 343 95 119-11 203-76 317-106 52-14 99-15 148-4" stroke-opacity="0.1"/>
+  </g>
+  <g>
+    <path d="M98 572l612-245 360 158-598 270Z" fill="url(#slope)" stroke="#d8e9cf" stroke-opacity="0.25"/>
+    <path d="M98 572l612-245 360 158-598 270Z" fill="none" stroke="#07100e" stroke-opacity="0.35" stroke-width="7"/>
+    <path d="M98 572l612-245 360 158-598 270Z" fill="none" stroke="#d8e9cf" stroke-opacity="0.28"/>
+    <path d="M132 612l601-239 309 136-580 260Z" fill="#183025" stroke="#b7d4a9" stroke-opacity="0.36"/>
+    <path d="M170 651l582-228 261 115-554 247Z" fill="#13281f" stroke="#b7d4a9" stroke-opacity="0.32"/>
+    <path d="M206 690l562-216 214 94-528 232Z" fill="#10231b" stroke="#b7d4a9" stroke-opacity="0.28"/>
+    <path d="M246 730l535-203 168 74-501 215Z" fill="#0d1d17" stroke="#b7d4a9" stroke-opacity="0.24"/>
+    <g fill="none" stroke="#d8e9cf" stroke-opacity="0.17">
+      <path d="M142 625l593-236 288 127"/>
+      <path d="M179 663l575-224 243 107"/>
+      <path d="M216 702l555-213 205 91"/>
+      <path d="M255 741l527-200 165 74"/>
+    </g>
+    <g fill="#74917a" fill-opacity="0.4" stroke="#b7d4a9" stroke-opacity="0.2">
+      <circle cx="330" cy="527" r="32"/>
+      <circle cx="379" cy="505" r="24"/>
+      <circle cx="413" cy="540" r="19"/>
+      <circle cx="731" cy="511" r="31"/>
+      <circle cx="782" cy="538" r="22"/>
+      <circle cx="835" cy="516" r="17"/>
+      <circle cx="280" cy="657" r="21"/>
+      <circle cx="323" cy="678" r="16"/>
+      <circle cx="726" cy="702" r="28"/>
+      <circle cx="770" cy="725" r="18"/>
+    </g>
+    <g fill="none" stroke="#cbb28a" stroke-opacity="0.38">
+      <path d="M432 635c94-40 190-59 288-57" stroke-width="13"/>
+      <path d="M432 635c94-40 190-59 288-57" stroke-width="1.5" stroke="#ead7b8"/>
+      <path d="M510 573c52-19 107-28 164-26" stroke-width="9"/>
+      <path d="M510 573c52-19 107-28 164-26" stroke-width="1.2" stroke="#ead7b8"/>
+    </g>
+    <g fill="#cbb28a">
+      <circle cx="432" cy="635" r="5"/>
+      <circle cx="720" cy="578" r="5"/>
+      <circle cx="510" cy="573" r="4"/>
+      <circle cx="674" cy="547" r="4"/>
+    </g>
+    <g fill="#8c9d94" font-family="monospace" font-size="12" letter-spacing="2">
+      <text x="265" y="472">TERRACE 04</text>
+      <text x="302" y="611">TERRACE 03</text>
+      <text x="346" y="649">TERRACE 02</text>
+      <text x="388" y="689">TERRACE 01</text>
+      <text x="806" y="690">RAMP +02.4</text>
+    </g>
+  </g>
+  <g stroke="#d8e9cf" stroke-opacity="0.38">
+    <path d="M72 116v620M62 116h20M62 742h20"/>
+    <path d="M92 709h-40M92 149h-40"/>
+  </g>
+  <text x="53" y="449" fill="#8c9d94" font-family="monospace" font-size="11" transform="rotate(-90 53 449)">ELEVATION +0.00 TO +12.40</text>
+  <g transform="translate(72 54)">
+    <path d="M0 0h260" stroke="#b7d4a9" stroke-opacity="0.55"/>
+    <text x="0" y="-13" fill="#b7d4a9" font-family="monospace" font-size="13" letter-spacing="3">CONCEPT STUDY / 03</text>
+  </g>
+  <g transform="translate(72 838)">
+    <text x="0" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">LANDSCAPE / TERRACE FIELD / 2026</text>
+    <text x="1056" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">TY / 003</text>
+  </g>
+</svg>

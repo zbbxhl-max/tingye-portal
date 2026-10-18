@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">暮色水庭概念图</title>
+  <desc id="desc">暮色庭院中以浅水面、汀步和两侧植物构成的抽象场景。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20382f"/>
+      <stop offset="0.48" stop-color="#12251e"/>
+      <stop offset="1" stop-color="#07100e"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#87a99c" stop-opacity="0.33"/>
+      <stop offset="0.5" stop-color="#42665a" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#b7d4a9" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ddedd4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ddedd4" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#ddedd4" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid2" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#d8e9cf" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <rect width="1200" height="900" fill="url(#grid2)"/>
+  <path d="M0 454h1200v446H0Z" fill="#091411"/>
+  <path d="M0 492c166-35 322-37 492-8 184 32 369 34 708-24v440H0Z" fill="url(#water)"/>
+  <ellipse cx="706" cy="629" rx="421" ry="132" fill="#8eb5a4" fill-opacity="0.05"/>
+  <g fill="none" stroke="#b7d4a9" stroke-opacity="0.18">
+    <path d="M0 598c224-32 412-25 612 4 189 28 375 26 588-13"/>
+    <path d="M0 652c208-27 398-18 590 8 217 29 404 20 610-19"/>
+    <path d="M0 713c218-20 400-9 604 12 207 21 399 9 596-16"/>
+    <path d="M0 779c226-15 413-2 610 17 196 19 393 4 590-12"/>
+  </g>
+  <path d="M722 455c-25 73-42 144-41 225 1 77 19 135 48 201" fill="none" stroke="url(#glow)" stroke-width="52" opacity="0.32"/>
+  <path d="M724 470c-16 67-27 134-24 198 2 72 14 137 37 214" fill="none" stroke="#e7f2e1" stroke-opacity="0.24" stroke-width="2"/>
+  <g>
+    <path d="M0 370c70-84 160-118 256-104 67 10 120 44 148 104v91H0Z" fill="#0d1b16"/>
+    <path d="M0 395c79-71 169-92 253-73 65 16 111 57 136 123H0Z" fill="#1e342a" stroke="#b7d4a9" stroke-opacity="0.18"/>
+    <g fill="#6e9277" fill-opacity="0.38" stroke="#b7d4a9" stroke-opacity="0.18">
+      <circle cx="89" cy="233" r="73"/>
+      <circle cx="188" cy="199" r="56"/>
+      <circle cx="278" cy="254" r="64"/>
+      <circle cx="351" cy="205" r="43"/>
+      <circle cx="385" cy="302" r="48"/>
+      <circle cx="141" cy="330" r="46"/>
+    </g>
+    <g stroke="#b7d4a9" stroke-opacity="0.25" fill="none">
+      <path d="M82 319c17-79 33-139 62-198M187 315c5-70 7-146 20-208M274 337c-3-78 0-149 22-220M355 315c1-72 10-129 34-181"/>
+    </g>
+  </g>
+  <g>
+    <path d="M850 275c82-38 186-27 264 19 47 28 79 82 86 147H850Z" fill="#0c1814"/>
+    <path d="M887 345c83-31 172-14 245 42 33 25 53 68 57 122H887Z" fill="#1d3229" stroke="#b7d4a9" stroke-opacity="0.17"/>
+    <g fill="#71927a" fill-opacity="0.34" stroke="#b7d4a9" stroke-opacity="0.16">
+      <circle cx="1009" cy="225" r="65"/>
+      <circle cx="1103" cy="256" r="53"/>
+      <circle cx="942" cy="260" r="43"/>
+      <circle cx="1161" cy="207" r="41"/>
+    </g>
+  </g>
+  <g fill="#20382e" stroke="#b7d4a9" stroke-opacity="0.45" stroke-width="2">
+    <path d="M208 520l117-31 81 54-66 52-119-20Z"/>
+    <path d="M421 561l104-25 75 45-54 43-112-11Z"/>
+    <path d="M589 606l92-19 63 37-45 36-99-9Z"/>
+    <path d="M760 657l84-13 52 31-34 29-91-3Z"/>
+    <path d="M913 701l69-6 39 24-27 21-75 3Z"/>
+  </g>
+  <g fill="none" stroke="#d8e9cf" stroke-opacity="0.19">
+    <path d="M208 520l117-31 81 54-66 52-119-20Z"/>
+    <path d="M421 561l104-25 75 45-54 43-112-11Z"/>
+    <path d="M589 606l92-19 63 37-45 36-99-9Z"/>
+  </g>
+  <g fill="#cbb28a" fill-opacity="0.7">
+    <circle cx="205" cy="613" r="3"/>
+    <circle cx="353" cy="585" r="3"/>
+    <circle cx="564" cy="672" r="3"/>
+    <circle cx="1088" cy="589" r="3"/>
+  </g>
+  <g transform="translate(72 54)">
+    <path d="M0 0h260" stroke="#b7d4a9" stroke-opacity="0.55"/>
+    <text x="0" y="-13" fill="#b7d4a9" font-family="monospace" font-size="13" letter-spacing="3">CONCEPT STUDY / 02</text>
+  </g>
+  <g transform="translate(72 838)">
+    <text x="0" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">GARDEN / DUSK WATER COURT / 2026</text>
+    <text x="1056" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">TY / 002</text>
+  </g>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">水平亭廊概念图</title>
+  <desc id="desc">深色园林亭廊概念图，以水平屋檐、柱列和静水倒影构成建筑场景。</desc>
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c3328"/>
+      <stop offset="0.55" stop-color="#0e1d17"/>
+      <stop offset="1" stop-color="#06100d"/>
+    </linearGradient>
+    <linearGradient id="water5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6b8e80" stop-opacity="0.17"/>
+      <stop offset="0.5" stop-color="#b7d4a9" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#6b8e80" stop-opacity="0.16"/>
+    </linearGradient>
+    <pattern id="grid5" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#d8e9cf" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg5)"/>
+  <rect width="1200" height="900" fill="url(#grid5)"/>
+  <path d="M0 615h1200v285H0Z" fill="url(#water5)"/>
+  <g fill="none" stroke="#b7d4a9" stroke-opacity="0.16">
+    <path d="M0 665h1200M0 716h1200M0 772h1200M0 827h1200"/>
+  </g>
+  <path d="M104 438h992l-73-62H176Z" fill="#182a22" stroke="#d8e9cf" stroke-opacity="0.33" stroke-width="2"/>
+  <path d="M138 453h925v33H138Z" fill="#0a1511" stroke="#b7d4a9" stroke-opacity="0.23"/>
+  <path d="M138 453h925v10H138Z" fill="#b7d4a9" fill-opacity="0.13"/>
+  <g fill="#0c1813" stroke="#b7d4a9" stroke-opacity="0.27">
+    <path d="M191 486h18v242h-18Z"/>
+    <path d="M333 486h18v242h-18Z"/>
+    <path d="M475 486h18v242h-18Z"/>
+    <path d="M617 486h18v242h-18Z"/>
+    <path d="M759 486h18v242h-18Z"/>
+    <path d="M901 486h18v242h-18Z"/>
+  </g>
+  <path d="M171 486h772" stroke="#d8e9cf" stroke-opacity="0.22"/>
+  <path d="M171 720h772" stroke="#d8e9cf" stroke-opacity="0.18"/>
+  <g fill="#15261e" stroke="#b7d4a9" stroke-opacity="0.13">
+    <rect x="230" y="531" width="81" height="159"/>
+    <rect x="371" y="531" width="81" height="159"/>
+    <rect x="512" y="531" width="81" height="159"/>
+    <rect x="653" y="531" width="81" height="159"/>
+    <rect x="794" y="531" width="81" height="159"/>
+  </g>
+  <g fill="#d8e9cf" fill-opacity="0.08">
+    <rect x="245" y="551" width="51" height="119"/>
+    <rect x="386" y="551" width="51" height="119"/>
+    <rect x="527" y="551" width="51" height="119"/>
+    <rect x="668" y="551" width="51" height="119"/>
+    <rect x="809" y="551" width="51" height="119"/>
+  </g>
+  <path d="M105 438h992l-73-62H176Z" fill="#07100e" fill-opacity="0.25"/>
+  <path d="M1063 449c28 57 47 105 58 171" fill="none" stroke="#cbb28a" stroke-opacity="0.28" stroke-width="3"/>
+  <g fill="#73947a" fill-opacity="0.3" stroke="#b7d4a9" stroke-opacity="0.15">
+    <circle cx="43" cy="280" r="91"/>
+    <circle cx="138" cy="249" r="70"/>
+    <circle cx="54" cy="199" r="52"/>
+    <circle cx="1191" cy="291" r="103"/>
+    <circle cx="1108" cy="242" r="70"/>
+    <circle cx="1176" cy="191" r="49"/>
+  </g>
+  <g fill="none" stroke="#b7d4a9" stroke-opacity="0.28">
+    <path d="M54 603V278M138 594V252M1107 595V244M1171 604V195"/>
+  </g>
+  <g transform="translate(0 720)">
+    <path d="M138 0h925v162H138Z" fill="#0a1511" fill-opacity="0.24"/>
+    <g fill="#d8e9cf" fill-opacity="0.08">
+      <path d="M191 0h18l30 162h-38Z"/>
+      <path d="M333 0h18l17 162h-31Z"/>
+      <path d="M475 0h18l8 162h-27Z"/>
+      <path d="M617 0h18l-5 162h-24Z"/>
+      <path d="M759 0h18l-19 162h-22Z"/>
+      <path d="M901 0h18l-38 162h-29Z"/>
+    </g>
+    <g stroke="#b7d4a9" stroke-opacity="0.12" fill="none">
+      <path d="M136 75h929M136 130h929"/>
+    </g>
+  </g>
+  <g fill="#8c9d94" font-family="monospace" font-size="12" letter-spacing="2">
+    <text x="138" y="408">ROOF / +4.20</text>
+    <text x="884" y="745">WATER PLANE / ±0.00</text>
+    <text x="191" y="506">COLUMN GRID / 2100</text>
+  </g>
+  <g transform="translate(72 54)">
+    <path d="M0 0h260" stroke="#b7d4a9" stroke-opacity="0.55"/>
+    <text x="0" y="-13" fill="#b7d4a9" font-family="monospace" font-size="13" letter-spacing="3">CONCEPT STUDY / 05</text>
+  </g>
+  <g transform="translate(72 838)">
+    <text x="0" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">ARCHITECTURE / HORIZONTAL PAVILION / 2026</text>
+    <text x="1056" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">TY / 005</text>
+  </g>
+</svg>

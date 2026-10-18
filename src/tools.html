@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07100e">
+    <meta
+      name="description"
+      content="庭野智作 AI 工具入口：ComfyUI、Codex、个人知识库和项目档案，支持浏览器本地配置链接。"
+    >
+    <title>AI 工具｜庭野智作</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="shell header__inner">
+        <a class="brand" href="index.html" aria-label="庭野智作首页">
+          <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+          <span class="brand__text">
+            <strong>庭野智作</strong>
+            <small>TINGYE STUDIO</small>
+          </span>
+        </a>
+        <nav class="site-nav" id="site-nav" data-nav aria-label="主导航">
+          <a class="nav__link" href="index.html">首页</a>
+          <a class="nav__link" href="garden.html">庭院设计</a>
+          <a class="nav__link" href="works.html">作品展示</a>
+          <a class="nav__link" href="tools.html" aria-current="page">AI 工具</a>
+          <a class="nav__link" href="workflows.html">工作流</a>
+          <a class="nav__link" href="status.html">系统状态</a>
+          <button class="button button--quiet nav__config-mobile" type="button" data-open-config>
+            配置链接
+          </button>
+        </nav>
+        <div class="header__actions">
+          <button class="config-trigger" type="button" data-open-config>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"></path>
+              <path d="M19 13.4v-2.8l-2-.5a6 6 0 0 0-.7-1.8l1.1-1.8-2-2-1.8 1.1a6 6 0 0 0-1.8-.7L11.3 3H8.5L8 5a6 6 0 0 0-1.8.7L4.4 4.6l-2 2 1.1 1.8a6 6 0 0 0-.7 1.8l-2 .5v2.8l2 .5a6 6 0 0 0 .7 1.8l-1.1 1.8 2 2 1.8-1.1a6 6 0 0 0 1.8.7l.5 2h2.8l.5-2a6 6 0 0 0 1.8-.7l1.8 1.1 2-2-1.1-1.8a6 6 0 0 0 .7-1.8l2-.5Z"></path>
+            </svg>
+            配置链接
+          </button>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="打开导航菜单"
+        >
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="shell">
+          <span class="eyebrow">TOOL DECK / 03</span>
+          <div class="page-hero__grid">
+            <div>
+              <h1>工具是入口，<br>不是新的信息孤岛。</h1>
+              <p class="page-hero__lead">
+                把常用 AI 工具和资料空间集中在一页。每个入口可以按设备单独配置，
+                未配置时清楚显示状态，不把本地路径伪装成手机可访问的地址。
+              </p>
+              <div class="page-hero__actions">
+                <button class="button" type="button" data-open-config>配置工具链接</button>
+                <a class="button button--quiet" href="status.html">查看能力边界</a>
+              </div>
+            </div>
+            <aside class="page-hero__aside">
+              <strong>LOCAL-FIRST</strong>
+              <p>
+                浏览器只保存 URL。ComfyUI 的启动、监听和访问控制仍由你在本机管理，
+                本门户不会自动开放端口。
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="tool-deck-title">
+        <div class="shell">
+          <div class="summary-band">
+            <div class="summary-band__metric">
+              <strong><span data-configured-count>0</span>/<span data-total-link-count>7</span></strong>
+              <span>当前浏览器已配置入口</span>
+            </div>
+            <p data-storage-status>设置会保存在当前浏览器中。</p>
+          </div>
+
+          <div class="section-heading" aria-labelledby="tool-deck-title">
+            <div class="section-heading__copy">
+              <span class="eyebrow">AI &amp; ARCHIVE</span>
+              <h2 id="tool-deck-title">四个核心入口。</h2>
+              <p>默认仅提供 Codex 官方公开地址，其余入口等待你按设备配置。</p>
+            </div>
+            <div class="section-heading__aside">
+              <button class="text-link" type="button" data-open-config>管理全部入口 →</button>
+            </div>
+          </div>
+
+          <div class="link-card-grid">
+            <article class="link-card" data-link-card="comfyui">
+              <div class="link-card__head">
+                <span class="link-card__kicker">LOCAL ENGINE</span>
+                <span class="status-pill status-pill--empty" data-link-status>尚未配置</span>
+              </div>
+              <h2>ComfyUI</h2>
+              <p>
+                本地图像生成与编辑工作台，用于概念推演、风格探索和图像变体。
+                可配置为本机地址、局域网地址或受控的反向代理地址。
+              </p>
+              <div class="link-card__footer">
+                <p class="link-card__note" data-link-note>可在“配置入口”中添加公开访问地址。</p>
+                <div class="link-card__action" data-link-action></div>
+              </div>
+            </article>
+
+            <article class="link-card" data-link-card="codex">
+              <div class="link-card__head">
+                <span class="link-card__kicker">BUILD PARTNER</span>
+                <span class="status-pill status-pill--empty" data-link-status>尚未配置</span>
+              </div>
+              <h2>Codex</h2>
+              <p>
+                用于脚本、站点和自动化工具开发的协作入口。
+                默认指向公开官网，可替换为你自己的受控工作环境。
+              </p>
+              <div class="link-card__footer">
+                <p class="link-card__note" data-link-note>可在“配置入口”中添加公开访问地址。</p>
+                <div class="link-card__action" data-link-action></div>
+              </div>
+            </article>
+
+            <article class="link-card" data-link-card="knowledge">
+              <div class="link-card__head">
+                <span class="link-card__kicker">KNOWLEDGE BASE</span>
+                <span class="status-pill status-pill--empty" data-link-status>尚未配置</span>
+              </div>
+              <h2>个人知识库</h2>
+              <p>
+                沉淀案例笔记、方法卡片、植物材料与设计判断。
+                公开部署时不要直接链接未受访问保护的整库内容。
+              </p>
+              <div class="link-card__footer">
+                <p class="link-card__note" data-link-note>可在“配置入口”中添加公开访问地址。</p>
+                <div class="link-card__action" data-link-action></div>
+              </div>
+            </article>
+
+            <article class="link-card" data-link-card="archive">
+              <div class="link-card__head">
+                <span class="link-card__kicker">PROJECT ARCHIVE</span>
+                <span class="status-pill status-pill--empty" data-link-status>尚未配置</span>
+              </div>
+              <h2>项目档案</h2>
+              <p>
+                集中访问在研项目、交付文件与版本记录。
+                建议指向有身份验证和权限控制的云空间。
+              </p>
+              <div class="link-card__footer">
+                <p class="link-card__note" data-link-note>可在“配置入口”中添加公开访问地址。</p>
+                <div class="link-card__action" data-link-action></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top" aria-labelledby="config-how-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div class="section-heading__copy">
+              <span class="eyebrow">CONFIGURATION</span>
+              <h2 id="config-how-title">链接配置只影响当前设备。</h2>
+              <p>同一份静态站点，在电脑和手机上可以各自指向不同的受控地址。</p>
+            </div>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-card__no">01 / OPEN</span>
+              <h3>打开配置入口</h3>
+              <p>点击页头或页脚的“配置链接”，输入完整的 http 或 https 地址。</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__no">02 / VALIDATE</span>
+              <h3>安全校验</h3>
+              <p>本机路径、file 协议、账号密码和危险协议会被直接拒绝。</p>
+            </article>
+            <article class="step-card">
+              <span class="step-card__no">03 / STORE</span>
+              <h3>保存到浏览器</h3>
+              <p>设置存储在当前浏览器，不写入仓库，也不会同步到其他设备。</p>
+            </article>
+          </div>
+
+          <div class="notice notice--spaced">
+            <span class="notice__icon" aria-hidden="true">!</span>
+            <div>
+              <strong>ComfyUI 默认不应对公网开放。</strong>
+              <p>
+                如果手机需要访问，应使用可信局域网、VPN 或带身份验证的反向代理。
+                不要把 Windows 远程桌面、ComfyUI 管理端口或私人知识库直接暴露到互联网。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top">
+        <div class="shell">
+          <div class="closing-cta">
+            <div>
+              <h2>配置好入口后，回到工作流看流程。</h2>
+              <p>工具负责执行，工作流负责让每一步留下可复用的判断。</p>
+            </div>
+            <a class="button" href="workflows.html">查看工作流 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+            <div>
+              <h2>庭野智作</h2>
+              <p>景观判断为骨，AI 工作流为器。一个面向设计实践的个人门户。</p>
+            </div>
+          </div>
+          <nav class="footer__nav" aria-label="页脚导航">
+            <a href="index.html">首页</a>
+            <a href="garden.html">庭院设计</a>
+            <a href="works.html">作品展示</a>
+            <a href="workflows.html">工作流</a>
+            <a href="status.html">系统状态</a>
+            <a href="garden.html#method">设计方法</a>
+          </nav>
+          <div class="footer__note">
+            <p>
+              本页不保存 API Key、密码或私人文件路径。链接配置只存储在当前浏览器。
+            </p>
+            <button type="button" data-open-config>配置链接 →</button>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-current-year>2026</span> TINGYE STUDIO</span>
+          <span>STATIC <span data-site-version>V1</span> · UPDATED <span data-updated-at>2026-10-18</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

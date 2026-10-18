@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07100e">
+    <meta
+      name="description"
+      content="庭野智作工作流：图像概念生成、案例分析和资料整理的预留协作路径。"
+    >
+    <title>工作流｜庭野智作</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="shell header__inner">
+        <a class="brand" href="index.html" aria-label="庭野智作首页">
+          <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+          <span class="brand__text">
+            <strong>庭野智作</strong>
+            <small>TINGYE STUDIO</small>
+          </span>
+        </a>
+        <nav class="site-nav" id="site-nav" data-nav aria-label="主导航">
+          <a class="nav__link" href="index.html">首页</a>
+          <a class="nav__link" href="garden.html">庭院设计</a>
+          <a class="nav__link" href="works.html">作品展示</a>
+          <a class="nav__link" href="tools.html">AI 工具</a>
+          <a class="nav__link" href="workflows.html" aria-current="page">工作流</a>
+          <a class="nav__link" href="status.html">系统状态</a>
+          <button class="button button--quiet nav__config-mobile" type="button" data-open-config>
+            配置链接
+          </button>
+        </nav>
+        <div class="header__actions">
+          <button class="config-trigger" type="button" data-open-config>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"></path>
+              <path d="M19 13.4v-2.8l-2-.5a6 6 0 0 0-.7-1.8l1.1-1.8-2-2-1.8 1.1a6 6 0 0 0-1.8-.7L11.3 3H8.5L8 5a6 6 0 0 0-1.8.7L4.4 4.6l-2 2 1.1 1.8a6 6 0 0 0-.7 1.8l-2 .5v2.8l2 .5a6 6 0 0 0 .7 1.8l-1.1 1.8 2 2 1.8-1.1a6 6 0 0 0 1.8.7l.5 2h2.8l.5-2a6 6 0 0 0 1.8-.7l1.8 1.1 2-2-1.1-1.8a6 6 0 0 0 .7-1.8l2-.5Z"></path>
+            </svg>
+            配置链接
+          </button>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="打开导航菜单"
+        >
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="shell">
+          <span class="eyebrow">WORKFLOW LANES / 04</span>
+          <div class="page-hero__grid">
+            <div>
+              <h1>把一次成功，<br>变成下一次的起点。</h1>
+              <p class="page-hero__lead">
+                工作流记录输入、判断和输出之间的关系。V1 先定义三条可扩展路径，
+                不执行任务，也不展示虚构的运行状态。
+              </p>
+            </div>
+            <aside class="page-hero__aside">
+              <strong>RESERVED / NOT CONNECTED</strong>
+              <p>
+                所有流程卡片均为模板预设。未来接入自动化时，需单独设计身份验证、
+                权限和日志机制。
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="workflow-title">
+        <div class="shell">
+          <div class="section-heading">
+            <div class="section-heading__copy">
+              <span class="eyebrow">RESERVED PATHS</span>
+              <h2 id="workflow-title">三条工作流，三种证据。</h2>
+              <p>图像看比较，案例看依据，资料看结构。每条路径都保留人工检查点。</p>
+            </div>
+          </div>
+
+          <div class="workflow-grid">
+            <article class="workflow-card">
+              <div class="workflow-card__header">
+                <span class="workflow-card__no">LANE 01 / IMAGE</span>
+                <h2>图像概念生成</h2>
+                <p class="workflow-card__description">
+                  从场地摘要出发，把设计意图拆成可控的图像变量，再通过人工比较收束方案。
+                </p>
+                <span class="workflow-card__status">模板预设 · 未接入</span>
+              </div>
+              <ol class="workflow-steps">
+                <li>
+                  <span class="workflow-steps__no">01</span>
+                  <div>
+                    <h3>整理场地摘要</h3>
+                    <p>明确空间类型、尺度、气候、材料和必须保留的场地条件。</p>
+                  </div>
+                  <span class="workflow-steps__tag">INPUT</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">02</span>
+                  <div>
+                    <h3>结构化提示词</h3>
+                    <p>把空间关系、视线、材质和氛围拆成可分别调整的描述。</p>
+                  </div>
+                  <span class="workflow-steps__tag">PROMPT</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">03</span>
+                  <div>
+                    <h3>生成变体与局部修正</h3>
+                    <p>先用低风险变体探索方向，再对有效结果做局部重绘与放大。</p>
+                  </div>
+                  <span class="workflow-steps__tag">GENERATE</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">04</span>
+                  <div>
+                    <h3>人工筛选与留档</h3>
+                    <p>记录为何保留或淘汰，将有效提示与参数回流到案例库。</p>
+                  </div>
+                  <span class="workflow-steps__tag">CURATE</span>
+                </li>
+              </ol>
+            </article>
+
+            <article class="workflow-card">
+              <div class="workflow-card__header">
+                <span class="workflow-card__no">LANE 02 / ANALYSIS</span>
+                <h2>案例分析</h2>
+                <p class="workflow-card__description">
+                  不停留在风格描述，而是拆解项目面对的条件、采取的策略与产生的体验。
+                </p>
+                <span class="workflow-card__status">模板预设 · 未接入</span>
+              </div>
+              <ol class="workflow-steps">
+                <li>
+                  <span class="workflow-steps__no">01</span>
+                  <div>
+                    <h3>收集基础资料</h3>
+                    <p>收纳总图、影像、场地背景与可核实的项目说明。</p>
+                  </div>
+                  <span class="workflow-steps__tag">COLLECT</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">02</span>
+                  <div>
+                    <h3>拆解空间策略</h3>
+                    <p>按进入、路径、停留、边界、材料和植物层级建立比较维度。</p>
+                  </div>
+                  <span class="workflow-steps__tag">DECOMPOSE</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">03</span>
+                  <div>
+                    <h3>建立横向对照</h3>
+                    <p>把多个案例放到相同问题下比较，找出可迁移与不可迁移的部分。</p>
+                  </div>
+                  <span class="workflow-steps__tag">COMPARE</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">04</span>
+                  <div>
+                    <h3>输出方法卡片</h3>
+                    <p>形成简洁、可检索、带证据来源的设计判断。</p>
+                  </div>
+                  <span class="workflow-steps__tag">SYNTHESIZE</span>
+                </li>
+              </ol>
+            </article>
+
+            <article class="workflow-card">
+              <div class="workflow-card__header">
+                <span class="workflow-card__no">LANE 03 / ARCHIVE</span>
+                <h2>资料整理</h2>
+                <p class="workflow-card__description">
+                  让项目资料拥有稳定的命名、标签和出处，减少下一次检索与交付的成本。
+                </p>
+                <span class="workflow-card__status">模板预设 · 未接入</span>
+              </div>
+              <ol class="workflow-steps">
+                <li>
+                  <span class="workflow-steps__no">01</span>
+                  <div>
+                    <h3>归集与去重</h3>
+                    <p>按项目、日期和来源汇集文件，清理重复与失效版本。</p>
+                  </div>
+                  <span class="workflow-steps__tag">INGEST</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">02</span>
+                  <div>
+                    <h3>统一命名</h3>
+                    <p>用稳定规则记录项目、阶段、内容类型与版本，不使用私人绝对路径。</p>
+                  </div>
+                  <span class="workflow-steps__tag">NAME</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">03</span>
+                  <div>
+                    <h3>添加标签与摘要</h3>
+                    <p>补充空间类型、材料、设计策略和一句话内容说明。</p>
+                  </div>
+                  <span class="workflow-steps__tag">TAG</span>
+                </li>
+                <li>
+                  <span class="workflow-steps__no">04</span>
+                  <div>
+                    <h3>权限检查后入库</h3>
+                    <p>确认是否包含隐私或版权风险，再决定公开、内部或仅本地保存。</p>
+                  </div>
+                  <span class="workflow-steps__tag">GATE</span>
+                </li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top">
+        <div class="shell">
+          <div class="notice">
+            <span class="notice__icon" aria-hidden="true">i</span>
+            <div>
+              <strong>当前页面没有“正在运行”或“任务完成”状态。</strong>
+              <p>
+                这些流程是 V1 的结构预设。接入真实执行器前，需要单独设计身份认证、
+                操作授权、状态反馈和审计记录。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--flush-top">
+        <div class="shell">
+          <div class="closing-cta">
+            <div>
+              <h2>先把工具地址放准，再考虑把流程接起来。</h2>
+              <p>前往 AI 工具页，按当前设备配置受控入口。</p>
+            </div>
+            <a class="button" href="tools.html">进入 AI 工具 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <span class="brand__mark" aria-hidden="true"><span>庭</span></span>
+            <div>
+              <h2>庭野智作</h2>
+              <p>景观判断为骨，AI 工作流为器。一个面向设计实践的个人门户。</p>
+            </div>
+          </div>
+          <nav class="footer__nav" aria-label="页脚导航">
+            <a href="index.html">首页</a>
+            <a href="garden.html">庭院设计</a>
+            <a href="works.html">作品展示</a>
+            <a href="tools.html">AI 工具</a>
+            <a href="status.html">系统状态</a>
+            <a href="garden.html#method">设计方法</a>
+          </nav>
+          <div class="footer__note">
+            <p>
+              本页不保存 API Key、密码或私人文件路径。链接配置只存储在当前浏览器。
+            </p>
+            <button type="button" data-open-config>配置链接 →</button>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-current-year>2026</span> TINGYE STUDIO</span>
+          <span>STATIC <span data-site-version>V1</span> · UPDATED <span data-updated-at>2026-10-18</span></span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

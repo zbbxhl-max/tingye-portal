@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="庭野智作">
+  <rect width="64" height="64" rx="18" fill="#07100e"/>
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#b7d4a9" stroke-width="2"/>
+  <path d="M13 39c9-8 18-9 27-4 4 2 8 2 12 0" fill="none" stroke="#6f937b" stroke-width="2"/>
+  <path d="M13 32c8-6 16-7 24-3 5 2 10 2 15-1" fill="none" stroke="#b7d4a9" stroke-width="2"/>
+  <path d="M16 46c8-4 16-4 23-1 4 2 8 2 12 0" fill="none" stroke="#cbb28a" stroke-width="1.7"/>
+  <circle cx="34" cy="28" r="4" fill="#b7d4a9"/>
+</svg>

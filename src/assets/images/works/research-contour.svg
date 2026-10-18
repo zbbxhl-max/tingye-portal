@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">地形阅读练习概念图</title>
+  <desc id="desc">以山体等高线、点阵、坡向箭头与尺寸标注构成的设计研究分析图。</desc>
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13251d"/>
+      <stop offset="0.55" stop-color="#0b1812"/>
+      <stop offset="1" stop-color="#07100e"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#b7d4a9" fill-opacity="0.12"/>
+    </pattern>
+    <pattern id="grid6" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#d8e9cf" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg6)"/>
+  <rect width="1200" height="900" fill="url(#grid6)"/>
+  <rect x="90" y="105" width="1020" height="690" fill="url(#dots)" stroke="#d8e9cf" stroke-opacity="0.11"/>
+  <g fill="none" stroke="#b7d4a9">
+    <path d="M171 616c74-112 139-210 235-248 112-44 216 11 276 111 72 121 170 161 319 142 74-10 123-31 166-61" stroke-opacity="0.19"/>
+    <path d="M182 648c82-115 153-202 253-238 116-42 221 16 281 116 66 111 160 147 301 132 79-8 133-29 178-61" stroke-opacity="0.23"/>
+    <path d="M194 681c89-115 166-194 271-226 119-37 223 20 282 120 59 100 150 131 282 120 82-7 139-28 187-59" stroke-opacity="0.28"/>
+    <path d="M207 717c98-116 179-188 287-215 120-30 225 24 281 122 54 92 141 116 260 108 85-6 146-26 195-55" stroke-opacity="0.35"/>
+    <path d="M230 757c107-117 191-180 301-202 119-23 221 27 272 119 49 89 126 104 231 97 84-6 149-24 195-51" stroke-opacity="0.27"/>
+    <path d="M170 580c70-110 133-207 228-251 109-51 219-6 286 95 79 118 183 163 340 145 72-8 118-28 157-56" stroke-opacity="0.16"/>
+    <path d="M192 534c69-111 133-199 228-233 104-38 199 8 266 117 62 102 165 143 300 126 58-7 101-22 137-44" stroke-opacity="0.14"/>
+    <path d="M226 492c68-101 134-175 224-204 99-31 188 10 252 118 57 95 151 130 272 117 43-4 82-13 114-29" stroke-opacity="0.12"/>
+    <path d="M278 457c73-84 140-142 221-166 91-27 167 9 226 109 47 81 127 108 222 100 29-2 53-7 73-15" stroke-opacity="0.1"/>
+  </g>
+  <g fill="#d8e9cf" fill-opacity="0.45">
+    <circle cx="455" cy="398" r="5"/>
+    <circle cx="698" cy="472" r="4"/>
+    <circle cx="880" cy="520" r="4"/>
+    <circle cx="348" cy="552" r="4"/>
+    <circle cx="573" cy="621" r="4"/>
+    <circle cx="774" cy="674" r="4"/>
+    <circle cx="278" cy="687" r="4"/>
+    <circle cx="975" cy="590" r="4"/>
+  </g>
+  <g fill="none" stroke="#cbb28a" stroke-width="1.4">
+    <path d="M455 398l-54 92M698 472l-36 72M880 520l-45 68M348 552l-40 60M573 621l-32 53M774 674l-35 47"/>
+    <path d="M401 490l-7-2 6-7M662 544l-7-2 5-8M835 588l-7-2 5-8M308 612l-7-2 6-7M541 674l-6-2 5-7M739 721l-6-2 5-7"/>
+  </g>
+  <g fill="#cbb28a">
+    <circle cx="455" cy="398" r="6"/>
+    <circle cx="698" cy="472" r="5"/>
+    <circle cx="880" cy="520" r="5"/>
+  </g>
+  <g stroke="#d8e9cf" stroke-opacity="0.42">
+    <path d="M90 795h1020M90 785v20M1110 785v20"/>
+    <path d="M1110 105v690M1100 105h20M1100 795h20"/>
+  </g>
+  <g fill="#8c9d94" font-family="monospace" font-size="12" letter-spacing="2">
+    <text x="579" y="825">SITE WIDTH / 84.0 M</text>
+    <text x="84" y="474" transform="rotate(-90 84 474)">DEPTH / 57.6 M</text>
+    <text x="418" y="371">POINT A / +18.4</text>
+    <text x="710" y="451">POINT B / +12.8</text>
+    <text x="721" y="705">SLOPE / 1:7.5</text>
+  </g>
+  <path d="M986 151v80l-31-23 31 23 31-23" fill="none" stroke="#b7d4a9" stroke-opacity="0.65"/>
+  <text x="992" y="136" fill="#b7d4a9" font-family="monospace" font-size="13" letter-spacing="2">N</text>
+  <g transform="translate(72 54)">
+    <path d="M0 0h260" stroke="#b7d4a9" stroke-opacity="0.55"/>
+    <text x="0" y="-13" fill="#b7d4a9" font-family="monospace" font-size="13" letter-spacing="3">CONCEPT STUDY / 06</text>
+  </g>
+  <g transform="translate(72 852)">
+    <text x="0" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">RESEARCH / TERRAIN READING / 2026</text>
+    <text x="1056" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">TY / 006</text>
+  </g>
+</svg>

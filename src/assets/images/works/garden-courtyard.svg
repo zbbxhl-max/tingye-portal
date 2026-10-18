@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">石庭与静水概念图</title>
+  <desc id="desc">深灰绿色庭院平面概念，包含围墙、树冠、步道与圆形水景。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17231e"/>
+      <stop offset="0.58" stop-color="#0d1713"/>
+      <stop offset="1" stop-color="#07100e"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.68" cy="0.2" r="0.72">
+      <stop offset="0" stop-color="#b7d4a9" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#b7d4a9" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#d8e9cf" stroke-opacity="0.045"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#grid)"/>
+  <rect width="1200" height="900" fill="url(#light)"/>
+  <path d="M0 655C190 590 365 619 531 560c157-56 279-146 430-151 94-4 167 17 239 46v445H0Z" fill="#0b1512" opacity="0.9"/>
+  <g fill="none" stroke="#b7d4a9" stroke-opacity="0.17">
+    <path d="M-48 713c163-75 338-50 503-111 171-63 296-151 465-150 126 0 243 42 330 104"/>
+    <path d="M-64 754c175-75 349-50 522-113 172-63 309-153 482-152 131 0 243 43 340 108"/>
+    <path d="M-29 795c173-67 351-48 522-107 175-60 314-147 490-147 126 0 236 38 323 96"/>
+    <path d="M-15 838c180-63 353-49 531-101 176-52 325-139 494-139 119 0 225 33 312 85"/>
+  </g>
+  <g transform="translate(138 122)">
+    <path d="M73 61h677l200 231-40 342-727 92L27 443Z" fill="#14211c" stroke="#d8e9cf" stroke-opacity="0.38" stroke-width="2"/>
+    <path d="M73 61h677l200 231-40 342-727 92L27 443Z" fill="none" stroke="#07100e" stroke-width="16" stroke-opacity="0.55"/>
+    <path d="M73 61h677l200 231-40 342-727 92L27 443Z" fill="none" stroke="#d8e9cf" stroke-opacity="0.4" stroke-width="2"/>
+    <path d="M177 154h457l125 178-52 243-536 55-77-239Z" fill="#101c17" stroke="#b7d4a9" stroke-opacity="0.3"/>
+    <path d="M262 247c96-26 218-31 303-2 60 21 89 67 76 113-16 57-92 91-194 98-105 7-202-18-233-65-26-40-2-78 48-144Z" fill="#456451" fill-opacity="0.4" stroke="#b7d4a9" stroke-opacity="0.45"/>
+    <ellipse cx="661" cy="379" rx="116" ry="78" fill="#a8c1b3" fill-opacity="0.12" stroke="#b7d4a9" stroke-opacity="0.55" stroke-width="2"/>
+    <ellipse cx="661" cy="379" rx="82" ry="52" fill="none" stroke="#d8e9cf" stroke-opacity="0.24"/>
+    <path d="M195 550c78-63 160-77 233-49 61 23 94 68 79 112-17 51-86 73-164 63-95-13-164-80-148-126Z" fill="#273e32" stroke="#b7d4a9" stroke-opacity="0.35"/>
+    <g fill="#6d8f74" fill-opacity="0.62" stroke="#b7d4a9" stroke-opacity="0.3">
+      <circle cx="247" cy="559" r="52"/>
+      <circle cx="322" cy="542" r="42"/>
+      <circle cx="377" cy="582" r="34"/>
+      <circle cx="292" cy="616" r="28"/>
+    </g>
+    <g fill="#8ba78f" fill-opacity="0.4">
+      <circle cx="763" cy="222" r="39"/>
+      <circle cx="809" cy="249" r="31"/>
+      <circle cx="735" cy="190" r="25"/>
+      <circle cx="844" cy="213" r="24"/>
+    </g>
+    <path d="M224 186c121 47 246 48 359 9" fill="none" stroke="#cbb28a" stroke-opacity="0.35" stroke-width="17"/>
+    <path d="M224 186c121 47 246 48 359 9" fill="none" stroke="#d8e9cf" stroke-opacity="0.2" stroke-width="2"/>
+    <path d="M661 379c-74 27-118 88-141 159" fill="none" stroke="#cbb28a" stroke-opacity="0.35" stroke-width="8"/>
+    <g fill="#cbb28a">
+      <circle cx="661" cy="379" r="6"/>
+      <circle cx="255" cy="268" r="4"/>
+      <circle cx="829" cy="344" r="4"/>
+    </g>
+    <g fill="#8c9d94" font-family="monospace" font-size="13" letter-spacing="2">
+      <text x="296" y="308" fill="#d8e9cf" fill-opacity="0.55">COURT</text>
+      <text x="708" y="488">WATER</text>
+      <text x="383" y="675">CANOPY</text>
+      <text x="31" y="728">ENTRY / 01</text>
+    </g>
+    <g stroke="#d8e9cf" stroke-opacity="0.45">
+      <path d="M995 84v690M985 84h20M985 774h20"/>
+      <path d="M1009 742h-30M1009 116h-30"/>
+    </g>
+    <text x="1033" y="438" fill="#8c9d94" font-family="monospace" font-size="12" transform="rotate(90 1033 438)">26.4 M</text>
+  </g>
+  <g transform="translate(72 54)">
+    <path d="M0 0h260" stroke="#b7d4a9" stroke-opacity="0.55"/>
+    <text x="0" y="-13" fill="#b7d4a9" font-family="monospace" font-size="13" letter-spacing="3">CONCEPT STUDY / 01</text>
+  </g>
+  <g transform="translate(72 838)">
+    <text x="0" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">GARDEN / STONE + WATER / 2026</text>
+    <text x="1056" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">TY / 001</text>
+  </g>
+</svg>

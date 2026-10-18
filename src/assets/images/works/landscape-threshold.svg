@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">林缘的阈值概念图</title>
+  <desc id="desc">深色林地中以疏密树阵、空隙和光带表现林缘边界的抽象景观图。</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1913"/>
+      <stop offset="0.55" stop-color="#173126"/>
+      <stop offset="1" stop-color="#0a1511"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e6f2de" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#e6f2de" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#e6f2de" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid4" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M72 0H0V72" fill="none" stroke="#d8e9cf" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg4)"/>
+  <rect width="1200" height="900" fill="url(#grid4)"/>
+  <path d="M0 676c112-33 218-31 326-4 118 29 185 29 303-4 120-34 224-36 341-8 87 21 157 22 230 7v233H0Z" fill="#07100e"/>
+  <g transform="rotate(-18 600 450)">
+    <rect x="268" y="-160" width="105" height="1220" fill="url(#beam)" opacity="0.44"/>
+    <rect x="492" y="-160" width="64" height="1220" fill="url(#beam)" opacity="0.3"/>
+    <rect x="694" y="-160" width="28" height="1220" fill="url(#beam)" opacity="0.28"/>
+  </g>
+  <g fill="none" stroke="#b7d4a9">
+    <path d="M0 586c140-83 261-99 398-48 99 37 158 100 257 101 131 1 211-73 330-110 79-24 150-28 215-14" stroke-opacity="0.14"/>
+    <path d="M0 624c142-79 270-92 406-41 100 38 166 98 264 96 127-2 211-73 329-105 78-21 144-24 201-13" stroke-opacity="0.11"/>
+    <path d="M0 660c145-73 275-83 409-33 105 39 176 95 273 91 122-4 209-71 329-98 72-17 137-19 189-10" stroke-opacity="0.09"/>
+  </g>
+  <g stroke="#b7d4a9" stroke-opacity="0.28" fill="none">
+    <path d="M93 774c29-178 32-318 15-448M93 663c-41-58-66-140-69-226M91 590c37-33 75-77 103-136M92 711c46-47 83-101 106-161"/>
+    <path d="M222 757c25-196 33-344 18-475M222 625c-35-61-54-133-55-203M223 548c44-38 79-92 104-157M220 700c43-56 72-126 86-195"/>
+    <path d="M361 742c21-179 24-339 9-480M362 605c-32-55-47-120-47-190M363 520c38-38 69-91 89-151M359 679c42-57 69-123 79-196"/>
+    <path d="M508 735c19-166 22-314 10-441M508 605c-29-48-42-111-41-177M510 519c35-35 62-82 80-137M506 673c41-54 65-113 74-177"/>
+    <path d="M666 728c17-179 19-333 7-461M665 587c-27-49-39-110-38-175M666 504c34-34 61-81 78-135M664 655c37-51 59-109 67-170"/>
+    <path d="M818 726c16-165 18-317 7-444M817 594c-26-44-36-101-35-164M818 510c30-32 55-76 70-126M816 663c34-48 55-104 62-162"/>
+    <path d="M971 733c17-173 19-327 7-457M970 603c-27-47-38-108-36-171M972 520c32-33 58-79 74-131M969 672c37-50 58-108 65-170"/>
+    <path d="M1121 742c17-183 18-344 6-477M1120 611c-26-48-37-109-35-173M1121 527c31-32 57-78 73-130M1119 680c36-50 57-108 64-169"/>
+  </g>
+  <g fill="#6f9478">
+    <circle cx="76" cy="254" r="66" fill-opacity="0.33"/>
+    <circle cx="128" cy="283" r="51" fill-opacity="0.31"/>
+    <circle cx="143" cy="224" r="40" fill-opacity="0.34"/>
+    <circle cx="207" cy="207" r="57" fill-opacity="0.28"/>
+    <circle cx="239" cy="267" r="47" fill-opacity="0.3"/>
+    <circle cx="298" cy="218" r="52" fill-opacity="0.28"/>
+    <circle cx="348" cy="262" r="37" fill-opacity="0.28"/>
+    <circle cx="410" cy="210" r="55" fill-opacity="0.25"/>
+    <circle cx="459" cy="271" r="39" fill-opacity="0.25"/>
+    <circle cx="517" cy="222" r="48" fill-opacity="0.24"/>
+    <circle cx="570" cy="277" r="33" fill-opacity="0.24"/>
+    <circle cx="624" cy="236" r="48" fill-opacity="0.22"/>
+    <circle cx="678" cy="289" r="34" fill-opacity="0.22"/>
+    <circle cx="736" cy="230" r="47" fill-opacity="0.2"/>
+    <circle cx="786" cy="283" r="34" fill-opacity="0.2"/>
+    <circle cx="846" cy="244" r="42" fill-opacity="0.18"/>
+    <circle cx="898" cy="292" r="29" fill-opacity="0.18"/>
+    <circle cx="956" cy="250" r="38" fill-opacity="0.16"/>
+    <circle cx="1010" cy="291" r="27" fill-opacity="0.16"/>
+    <circle cx="1076" cy="246" r="38" fill-opacity="0.14"/>
+    <circle cx="1131" cy="286" r="26" fill-opacity="0.14"/>
+  </g>
+  <g fill="none" stroke="#d8e9cf" stroke-opacity="0.14">
+    <path d="M0 352c185-51 372-52 559-4 186 48 376 45 641-7"/>
+    <path d="M0 392c195-45 390-40 579 5 187 45 383 39 621-12"/>
+    <path d="M0 433c194-37 386-29 574 12 191 41 384 34 626-17"/>
+  </g>
+  <path d="M0 670h1200" stroke="#b7d4a9" stroke-opacity="0.28"/>
+  <path d="M0 686h1200" stroke="#b7d4a9" stroke-opacity="0.12"/>
+  <g fill="#cbb28a">
+    <circle cx="462" cy="681" r="4"/>
+    <circle cx="782" cy="681" r="4"/>
+    <circle cx="1031" cy="681" r="4"/>
+  </g>
+  <g fill="#8c9d94" font-family="monospace" font-size="12" letter-spacing="2">
+    <text x="314" y="718">FOREST EDGE</text>
+    <text x="735" y="718">OPEN MEADOW</text>
+    <text x="105" y="500">LAYER 01 / CANOPY</text>
+    <text x="927" y="500">LAYER 02 / GAP</text>
+  </g>
+  <g transform="translate(72 54)">
+    <path d="M0 0h260" stroke="#b7d4a9" stroke-opacity="0.55"/>
+    <text x="0" y="-13" fill="#b7d4a9" font-family="monospace" font-size="13" letter-spacing="3">CONCEPT STUDY / 04</text>
+  </g>
+  <g transform="translate(72 838)">
+    <text x="0" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">LANDSCAPE / FOREST THRESHOLD / 2026</text>
+    <text x="1056" y="0" fill="#617169" font-family="monospace" font-size="12" letter-spacing="2">TY / 004</text>
+  </g>
+</svg>
