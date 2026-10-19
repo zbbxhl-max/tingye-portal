@@ -1,4 +1,4 @@
-# 庭野智作 · 个人 AI 工作平台门户 V1.1
+# 庭野智作 · 个人 AI 工作平台门户 V1.2
 
 一个面向 Windows + Codex + ComfyUI 工作环境的个人 AI 门户。门户本体仍是静态站点；AI 生图专项通过受保护的 Cloudflare Worker 入口连接本机工作台，门户不执行本地命令，也不读取真实服务状态。
 
@@ -315,7 +315,7 @@ Pages 项目 Secrets 同样为 `GATE_PASSWORD`、`GATE_SECRET`、`ADMIN_TOKEN`�
 
 ## 安全边界
 
-V1.1 明确不提供：
+V1.2 明确不提供：
 
 - Windows 远程桌面或公网远程控制。
 - ComfyUI 公网监听、端口修改或启动控制。
