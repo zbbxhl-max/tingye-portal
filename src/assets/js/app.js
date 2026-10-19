@@ -1,4 +1,4 @@
-import { LINK_GROUPS, SITE_CONFIG } from "./config.js?v=1.1.1";
+import { LINK_GROUPS, SITE_CONFIG } from "./config.js?v=1.1.2";
 
 const linkDefaults = new Map(
   SITE_CONFIG.links.map((link) => [link.id, link.defaultUrl || ""])

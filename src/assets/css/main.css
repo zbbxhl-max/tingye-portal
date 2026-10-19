@@ -1400,7 +1400,7 @@ button.text-link {
   min-height: 270px;
   grid-column: 1 / -1;
   background:
-    linear-gradient(90deg, #07100e 0%, rgba(7, 16, 14, 0.96) 52%, rgba(7, 16, 14, 0.78) 100%),
+    linear-gradient(90deg, #07100e 0%, rgba(7, 16, 14, 0.97) 52%, rgba(7, 16, 14, 0.88) 100%),
     url("../images/ai-image/workbench.webp") center / cover;
   border-color: rgba(183, 212, 169, 0.24);
 }
