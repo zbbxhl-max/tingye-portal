@@ -17,10 +17,20 @@ export const SITE_CONFIG = Object.freeze({
   tagline: "景观判断为骨，AI 工作流为器。",
   description:
     "面向庭院与景观设计的个人 AI 工作平台，以统一入口连接案例、作品、工具与可迭代的工作流。",
-  version: "V1",
-  updatedAt: "2026-10-18",
+  version: "V1.1",
+  updatedAt: "2026-10-19",
   storageKey: "tingye-portal.link-overrides.v1",
   links: Object.freeze([
+    {
+      id: "ai-image",
+      group: "ai-tools",
+      title: "AI 生图专项",
+      kicker: "IMAGE WORKBENCH",
+      description:
+        "645 条建筑景观预设、双图输入、FLUX2/FLUX3 专业扩写与生成前后对比。",
+      actionLabel: "打开出图工作台",
+      defaultUrl: "https://tingye-ai-image.826t6km2n4.workers.dev/"
+    },
     {
       id: "comfyui",
       group: "ai-tools",

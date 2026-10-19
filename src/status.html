@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#07100e">
     <meta
       name="description"
-      content="庭野智作系统状态说明：V1 为静态展示，不监控 ComfyUI 或其他本地服务运行状态。"
+      content="庭野智作系统状态说明：门户为静态展示，不监控 ComfyUI、AI 生图工作台或其他本地服务运行状态。"
     >
     <title>系统状态｜庭野智作</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
@@ -65,7 +65,8 @@
             <div>
               <h1>这里只说明<br>门户自身的状态。</h1>
               <p class="page-hero__lead">
-                V1 没有服务端，也没有连接 ComfyUI、Windows 或任何本地执行器。
+                门户本身没有服务端，也不直接连接 ComfyUI、Windows 或任何本地执行器。
+                AI 生图专项通过独立 Worker 入口访问，其队列与结果不在本页展示。
                 页面中的数据是内容快照与当前浏览器的链接配置，不是服务器健康监控。
               </p>
             </div>

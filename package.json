@@ -1,6 +1,6 @@
 {
   "name": "tingye-ai-portal",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "庭野智作：面向景观设计与 AI 协作的个人工作门户",
   "type": "module",

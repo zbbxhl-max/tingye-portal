@@ -1,6 +1,6 @@
-# 庭野智作 · 个人 AI 工作平台门户 V1
+# 庭野智作 · 个人 AI 工作平台门户 V1.1
 
-一个面向 Windows + Codex + ComfyUI 工作环境的个人 AI 门户。V1 只做统一导航、方法展示和作品浏览，不连接后端，不执行本地命令，也不读取真实服务状态。
+一个面向 Windows + Codex + ComfyUI 工作环境的个人 AI 门户。门户本体仍是静态站点；AI 生图专项通过受保护的 Cloudflare Worker 入口连接本机工作台，门户不执行本地命令，也不读取真实服务状态。
 
 网站使用纯 HTML、CSS 和 JavaScript 编写，无运行时依赖，可部署到 GitHub + Cloudflare Pages。
 
@@ -15,6 +15,8 @@
 
 - 中文优先、响应式布局，适配桌面、平板和手机。
 - 六个完整模块：首页、庭院设计、作品展示、AI 工具、工作流、系统状态。
+- AI 生图专项专题页：项目定位、能力数据、五步工作流、界面与公共预设前后对比。
+- AI 工具页、首页工具快照和工作流页均提供 AI 生图入口。
 - 深色技术驾驶舱视觉，结合景观等高线、场地边界和建筑制图元素。
 - 统一工具链接注册表，支持浏览器本地配置和恢复默认值。
 - 未配置链接明确显示“尚未配置”，不会产生可点击的错误地址。
@@ -23,6 +25,7 @@
 - 六张本地 SVG 概念作品图和分类筛选交互。
 - 系统状态页明确标注“静态展示，非实时监控”。
 - Cloudflare `_headers` 安全响应头。
+- Cloudflare Worker 固定入口：Worker 访问密码 + 出图应用口令，自动同步 quick tunnel 地址。
 
 ## 目录结构
 
@@ -34,6 +37,7 @@
 │  ├─ works.html                 # 作品展示
 │  ├─ tools.html                 # AI 工具
 │  ├─ workflows.html             # 工作流
+│  ├─ ai-image.html              # AI 生图专项
 │  ├─ status.html                # 系统状态
 │  ├─ 404.html                   # 自定义 404
 │  ├─ robots.txt
@@ -42,7 +46,11 @@
 │     ├─ css/main.css
 │     ├─ js/config.js            # 站点与链接默认配置
 │     ├─ js/app.js               # 导航、链接配置、筛选等交互
-│     └─ images/                 # 本地图标和概念作品图
+│     └─ images/                 # 本地图标、概念作品图与 AI 生图截图
+├─ worker/ai-image-proxy/        # Cloudflare Worker 网关（不进入 Pages 构建）
+│  ├─ src/index.js               # 密码门、KV、代理与错误页
+│  ├─ test/smoke.mjs             # 本地网关测试
+│  └─ wrangler.toml
 ├─ scripts/
 │  ├─ serve.mjs                  # 无依赖本地静态服务器
 │  ├─ verify.mjs                 # 静态检查
@@ -137,8 +145,11 @@ http://127.0.0.1:4174
 - `actionLabel`：已配置时的按钮文字。
 - `defaultUrl`：默认公开地址；留空表示“尚未配置”。
 
+专题页按钮使用 `data-link-entry="ai-image"`，会自动读取同一份链接配置。
+
 当前默认值：
 
+- AI 生图专项：`https://tingye-ai-image.826t6km2n4.workers.dev/`
 - Codex：`https://chatgpt.com/codex`
 - ComfyUI、个人知识库、项目档案、项目资料、场地研究、案例参考：留空
 
@@ -240,15 +251,63 @@ npx wrangler pages deploy dist --project-name tingye-portal
 
 首次使用需要登录 Cloudflare，并拥有相应 Pages 项目权限。
 
+## AI 生图专项与固定入口
+
+专题页：<https://tingye-portal.pages.dev/ai-image.html>
+
+工作台固定入口：<https://tingye-ai-image.826t6km2n4.workers.dev/>
+
+完整链路：
+
+```text
+浏览器
+  → tingye-ai-image.826t6km2n4.workers.dev
+  → Cloudflare Worker（访问密码 + 签名 Cookie）
+  → quick tunnel（每次启动自动更新）
+  → 本机 http://127.0.0.1:8787
+  → 本机 ComfyUI http://127.0.0.1:8000
+```
+
+Worker 源码在 `worker/ai-image-proxy/`，不进入 `src/` 或 `dist/`。它使用 KV `TUNNEL_STATE` 保存当前 quick tunnel 地址，并通过以下接口工作：
+
+- `GET/POST /__gate`：Worker 访问密码与 30 天签名 Cookie。
+- `GET /__health`：返回是否已配置隧道，不暴露隧道地址。
+- `PUT /__admin/tunnel`：凭管理令牌更新或清空隧道地址。
+- 其余请求：校验 Cookie 后代理到本机工作台，包括登录、上传、任务轮询、图片和 PWA 资源。
+
+本机脚本：
+
+- `D:\AI生图专项\网页\启动公网工作台.vbs`：启动网页、等待 8787、启动隧道、发布地址并打开固定入口。
+- `D:\AI生图专项\网页\停止公网工作台.vbs`：关闭隧道并通知 Worker 清空地址。
+- `D:\AI生图专项\网页\tools\remote.ps1`：检测 quick tunnel，调用 Worker 管理接口并轮询 `/__health`。
+- `D:\AI生图专项\网页\tools\worker-public.json`：Worker 地址与管理令牌文件名。
+- `D:\AI生图专项\网页\tools\worker-gate.txt` 和 `worker-admin.token`：只保存在本机的访问密码与管理令牌，不提交到 Git。
+
+Worker 部署：
+
+```powershell
+cd worker\ai-image-proxy
+npm install
+npx wrangler deploy
+```
+
+Worker Secrets 为 `GATE_PASSWORD`、`GATE_SECRET`、`ADMIN_TOKEN`。修改密码后需同时轮换 `GATE_SECRET`，让旧 Cookie 立即失效。本地测试运行：
+
+```powershell
+node test/smoke.mjs
+```
+
+`workers.dev` 不提供 Cloudflare Access 邮箱验证，因此当前采用 Worker 密码 + 出图应用口令两层保护。若以后接入自己的域名，可在 Worker 前增加 Cloudflare Access。
+
 ## 安全边界
 
-V1 明确不提供：
+V1.1 明确不提供：
 
 - Windows 远程桌面或公网远程控制。
 - ComfyUI 公网监听、端口修改或启动控制。
 - 私人知识库整库复制到公开仓库。
 - 前端长期 API Key、密码或访问令牌。
-- 未经身份验证的远程 AI 执行接口。
+- 未经身份验证的远程 AI 执行接口；AI 生图入口必须通过 Worker 密码和应用口令。
 - ComfyUI、Windows 或任何服务的实时健康监控。
 
 发布前请检查：
@@ -261,7 +320,7 @@ V1 明确不提供：
 
 ## 已知边界与后续建议
 
-V1 不包含登录、后端、数据库、任务队列、服务监控和远程执行。后续接入建议按以下顺序推进：
+门户本体不包含数据库、任务队列和服务监控；AI 生图专项的执行、队列和登录由独立的本机服务负责。后续接入建议按以下顺序推进：
 
 1. 先建立受身份验证保护的局域网或 VPN 访问层。
 2. 为 ComfyUI 设计独立网关，不在前端直接保存访问凭据。

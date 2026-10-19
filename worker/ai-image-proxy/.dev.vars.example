@@ -1,0 +1,4 @@
+GATE_PASSWORD="replace-with-a-long-random-password"
+GATE_SECRET="replace-with-a-32-byte-random-secret"
+ADMIN_TOKEN="replace-with-a-32-byte-random-token"
+ALLOW_TEST_ORIGIN="1"

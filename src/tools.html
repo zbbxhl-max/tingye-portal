@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#07100e">
     <meta
       name="description"
-      content="庭野智作 AI 工具入口：ComfyUI、Codex、个人知识库和项目档案，支持浏览器本地配置链接。"
+      content="庭野智作 AI 工具入口：AI 生图专项、ComfyUI、Codex、个人知识库和项目档案，支持浏览器本地配置链接。"
     >
     <title>AI 工具｜庭野智作</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
@@ -76,8 +76,8 @@
             <aside class="page-hero__aside">
               <strong>LOCAL-FIRST</strong>
               <p>
-                浏览器只保存 URL。ComfyUI 的启动、监听和访问控制仍由你在本机管理，
-                本门户不会自动开放端口。
+                浏览器只保存 URL。AI 生图专项通过受保护的 Worker 入口连接本机工作台；
+                ComfyUI 的启动、监听和访问控制仍由你在本机管理。
               </p>
             </aside>
           </div>
@@ -97,8 +97,8 @@
           <div class="section-heading" aria-labelledby="tool-deck-title">
             <div class="section-heading__copy">
               <span class="eyebrow">AI &amp; ARCHIVE</span>
-              <h2 id="tool-deck-title">四个核心入口。</h2>
-              <p>默认仅提供 Codex 官方公开地址，其余入口等待你按设备配置。</p>
+              <h2 id="tool-deck-title">五个核心入口。</h2>
+              <p>AI 生图专项已接入，其余入口等待你按设备配置。</p>
             </div>
             <div class="section-heading__aside">
               <button class="text-link" type="button" data-open-config>管理全部入口 →</button>
@@ -106,6 +106,23 @@
           </div>
 
           <div class="link-card-grid">
+            <article class="link-card link-card--feature" data-link-card="ai-image">
+              <div class="link-card__head">
+                <span class="link-card__kicker">IMAGE WORKBENCH</span>
+                <span class="status-pill status-pill--empty" data-link-status>尚未配置</span>
+              </div>
+              <h3>AI 生图专项</h3>
+              <p>
+                645 条建筑景观预设、双图输入、FLUX2/FLUX3 专业扩写与生成前后对比。
+                公网入口需要登录，电脑与隧道在线时可用。
+              </p>
+              <a class="text-link link-card__detail" href="ai-image.html">项目专题 →</a>
+              <div class="link-card__footer">
+                <p class="link-card__note" data-link-note>可在“配置入口”中添加公开访问地址。</p>
+                <div class="link-card__action" data-link-action></div>
+              </div>
+            </article>
+
             <article class="link-card" data-link-card="comfyui">
               <div class="link-card__head">
                 <span class="link-card__kicker">LOCAL ENGINE</span>
@@ -206,7 +223,7 @@
               <strong>ComfyUI 默认不应对公网开放。</strong>
               <p>
                 如果手机需要访问，应使用可信局域网、VPN 或带身份验证的反向代理。
-                不要把 Windows 远程桌面、ComfyUI 管理端口或私人知识库直接暴露到互联网。
+                AI 生图专项使用 Worker 密码门与应用口令，不直接暴露 8787 或 ComfyUI 管理端口。
               </p>
             </div>
           </div>

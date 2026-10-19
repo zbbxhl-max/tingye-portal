@@ -10,6 +10,7 @@ const requiredPages = [
   "works.html",
   "tools.html",
   "workflows.html",
+  "ai-image.html",
   "status.html",
   "404.html"
 ];

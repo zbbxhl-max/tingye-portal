@@ -65,15 +65,15 @@
             <div>
               <h1>把一次成功，<br>变成下一次的起点。</h1>
               <p class="page-hero__lead">
-                工作流记录输入、判断和输出之间的关系。V1 先定义三条可扩展路径，
-                不执行任务，也不展示虚构的运行状态。
+                工作流记录输入、判断和输出之间的关系。图像生成已接入 AI 生图专项，
+                案例分析与资料整理仍保留为结构预设。门户本身不读取任务队列，也不展示虚构的运行状态。
               </p>
             </div>
             <aside class="page-hero__aside">
-              <strong>RESERVED / NOT CONNECTED</strong>
+              <strong>ONE LANE LIVE / TWO RESERVED</strong>
               <p>
-                所有流程卡片均为模板预设。未来接入自动化时，需单独设计身份验证、
-                权限和日志机制。
+                图像生成已有真实工作台与受保护的公网入口；其余两条尚未接入执行器，
+                继续以结构预设呈现。
               </p>
             </aside>
           </div>
@@ -91,14 +91,14 @@
           </div>
 
           <div class="workflow-grid">
-            <article class="workflow-card">
+            <article class="workflow-card workflow-card--connected" id="image-lane">
               <div class="workflow-card__header">
                 <span class="workflow-card__no">LANE 01 / IMAGE</span>
                 <h2>图像概念生成</h2>
                 <p class="workflow-card__description">
-                  从场地摘要出发，把设计意图拆成可控的图像变量，再通过人工比较收束方案。
+                  从底图、参考图与预设出发，把设计意图拆成可控的图像变量，再通过前后对比收束方案。
                 </p>
-                <span class="workflow-card__status">模板预设 · 未接入</span>
+                <span class="workflow-card__status">已接入 · AI 生图专项</span>
               </div>
               <ol class="workflow-steps">
                 <li>
@@ -134,6 +134,10 @@
                   <span class="workflow-steps__tag">CURATE</span>
                 </li>
               </ol>
+              <div class="workflow-card__links">
+                <a class="text-link" href="ai-image.html">项目专题 →</a>
+                <a class="text-link" href="#" data-link-entry="ai-image" data-link-label="打开工作台">打开工作台 →</a>
+              </div>
             </article>
 
             <article class="workflow-card">
@@ -234,10 +238,10 @@
           <div class="notice">
             <span class="notice__icon" aria-hidden="true">i</span>
             <div>
-              <strong>当前页面没有“正在运行”或“任务完成”状态。</strong>
+              <strong>图像生成已接入，门户仍不展示任务状态。</strong>
               <p>
-                这些流程是 V1 的结构预设。接入真实执行器前，需要单独设计身份认证、
-                操作授权、状态反馈和审计记录。
+                AI 生图专项在独立工作台中执行，并在那里显示自己的队列与结果。
+                门户只保留方法与入口，不复制任务状态，也不伪造完成记录。
               </p>
             </div>
           </div>

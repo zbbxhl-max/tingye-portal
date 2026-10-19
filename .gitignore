@@ -1,5 +1,9 @@
 dist/
 node_modules/
+worker/**/.dev.vars
+worker/**/.wrangler/
+worker/**/*.token
+worker/**/.secret-bulk.json
 .DS_Store
 Thumbs.db
 *.log

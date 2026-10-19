@@ -305,9 +305,40 @@ function renderMiniCard(card) {
   }
 }
 
+function renderLinkHref(anchor) {
+  const id = anchor.dataset.linkEntry;
+  const link = SITE_CONFIG.links.find((item) => item.id === id);
+  if (!link) return;
+
+  const result = getValidatedLinkState(id);
+  const label = anchor.dataset.linkLabel || link.actionLabel;
+
+  if (!result.url) {
+    anchor.removeAttribute("href");
+    anchor.removeAttribute("target");
+    anchor.removeAttribute("rel");
+    anchor.dataset.linkState = "empty";
+    anchor.setAttribute("aria-disabled", "true");
+    anchor.textContent = "入口尚未配置";
+    return;
+  }
+
+  anchor.href = result.url;
+  anchor.target = "_blank";
+  anchor.rel = "noopener noreferrer";
+  anchor.dataset.linkState = "ready";
+  anchor.removeAttribute("aria-disabled");
+
+  const arrow = document.createElement("span");
+  arrow.setAttribute("aria-hidden", "true");
+  arrow.textContent = "↗";
+  anchor.replaceChildren(document.createTextNode(`${label} `), arrow);
+}
+
 function renderAllLinks() {
   document.querySelectorAll("[data-link-card]").forEach(renderCard);
   document.querySelectorAll("[data-link-mini]").forEach(renderMiniCard);
+  document.querySelectorAll("[data-link-entry]").forEach(renderLinkHref);
 
   const configured = SITE_CONFIG.links.filter(
     (link) => getValidatedLinkState(link.id).url
