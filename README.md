@@ -4,6 +4,13 @@
 
 网站使用纯 HTML、CSS 和 JavaScript 编写，无运行时依赖，可部署到 GitHub + Cloudflare Pages。
 
+## 线上地址
+
+- 正式站点：<https://tingye-portal.pages.dev/>
+- GitHub 仓库：<https://github.com/zbbxhl-max/tingye-portal>
+
+生产分支为 `main`。推送到 `main` 后，Cloudflare Pages 会自动执行 `npm run build` 并发布 `dist/`。
+
 ## 已实现内容
 
 - 中文优先、响应式布局，适配桌面、平板和手机。
@@ -176,16 +183,13 @@ http://127.0.0.1:4174
 
 ## GitHub 上传
 
-项目当前不会自动创建远程仓库。可先在 GitHub 创建一个空仓库，例如 `tingye-portal`，不要在 GitHub 端额外勾选 README、`.gitignore` 或 License。
+项目已关联 GitHub 仓库 `zbbxhl-max/tingye-portal`，本地 `main` 跟踪 `origin/main`。
 
-然后在本项目根目录执行：
+如需在新设备重新克隆：
 
 ```powershell
-git init -b main
-git add .
-git commit -m "feat: launch personal AI portal v1"
-git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-git push -u origin main
+git clone https://github.com/zbbxhl-max/tingye-portal.git
+cd tingye-portal
 ```
 
 推送前建议再次确认：
@@ -199,26 +203,24 @@ npm run verify
 
 ## Cloudflare Pages 部署
 
-### 通过 Cloudflare 控制台
+### 当前配置
 
-1. 登录 Cloudflare Dashboard。
-2. 进入 **Workers & Pages**，选择 **Create application**。
-3. 选择 **Pages**，再选择 **Connect to Git**。
-4. 授权 GitHub 并选择刚创建的仓库。
-5. 项目配置填写：
+Cloudflare Pages 项目 `tingye-portal` 已连接 GitHub 仓库，首次部署已完成。构建配置如下：
 
 ```text
+项目名称：tingye-portal
+生产分支：main
 Framework preset：None
 Build command：npm run build
 Build output directory：dist
 Root directory：/
 ```
 
-6. 环境变量无需填写。
-7. 如平台未使用合适 Node 版本，可增加环境变量 `NODE_VERSION=20`。
-8. 点击部署。成功后 Cloudflare 会提供 `*.pages.dev` 地址。
+构建环境使用 Node.js 22.16.0 和 npm 10.9.2，无需额外环境变量。如日后更换构建镜像，可增加 `NODE_VERSION=20` 固定版本。
 
 `src/_headers` 会随构建进入 `dist/_headers`，由 Cloudflare Pages 自动应用 CSP 和安全响应头。
+
+如需从零重建项目：登录 Cloudflare Dashboard，进入 **Workers & Pages**，选择 **Create application**，使用旧版 **Pages** 流程连接 Git 仓库，并填写上面的构建配置。
 
 ### 后续更新
 
