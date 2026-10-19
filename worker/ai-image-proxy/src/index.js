@@ -39,8 +39,23 @@ export default {
 };
 
 async function handleAdmin(request, env) {
+  if (request.method === "GET") {
+    const authorization = request.headers.get("Authorization") || "";
+    const expected = `Bearer ${env.ADMIN_TOKEN || ""}`;
+    if (!env.ADMIN_TOKEN || !timingSafeEqual(authorization, expected)) {
+      return json({ error: "unauthorized" }, 401);
+    }
+    const record = await readTunnelRecord(env);
+    return json({
+      ok: true,
+      configured: Boolean(record?.url),
+      url: record?.url || null,
+      updatedAt: record?.updatedAt || null
+    });
+  }
+
   if (request.method !== "PUT" && request.method !== "POST") {
-    return json({ error: "method_not_allowed" }, 405, { Allow: "PUT" });
+    return json({ error: "method_not_allowed" }, 405, { Allow: "GET, PUT" });
   }
 
   const authorization = request.headers.get("Authorization") || "";

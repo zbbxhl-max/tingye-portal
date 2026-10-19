@@ -156,6 +156,15 @@ async function main() {
   check("admin rejects wrong token", response.status === 401);
 
   response = await fetch(`${workerOrigin}/__admin/tunnel`, {
+    headers: { Authorization: `Bearer ${vars.ADMIN_TOKEN}` }
+  });
+  body = await response.json();
+  check(
+    "admin reads current tunnel",
+    response.status === 200 && body.configured === false && body.url === null
+  );
+
+  response = await fetch(`${workerOrigin}/__admin/tunnel`, {
     method: "PUT",
     headers: { Authorization: `Bearer ${vars.ADMIN_TOKEN}`, "Content-Type": "application/json" },
     body: JSON.stringify({ url: "https://example.com" })
@@ -172,6 +181,15 @@ async function main() {
   response = await fetch(`${workerOrigin}/__health`);
   body = await response.json();
   check("health reports configured", body.configured === true);
+
+  response = await fetch(`${workerOrigin}/__admin/tunnel`, {
+    headers: { Authorization: `Bearer ${vars.ADMIN_TOKEN}` }
+  });
+  body = await response.json();
+  check(
+    "admin returns configured tunnel",
+    response.status === 200 && body.url === mockOrigin
+  );
 
   response = await fetch(`${workerOrigin}/hello`, { headers: { Cookie: cookie } });
   check(

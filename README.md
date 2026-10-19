@@ -25,7 +25,7 @@
 - 六张本地 SVG 概念作品图和分类筛选交互。
 - 系统状态页明确标注“静态展示，非实时监控”。
 - Cloudflare `_headers` 安全响应头。
-- Cloudflare Worker 固定入口：Worker 访问密码 + 出图应用口令，自动同步 quick tunnel 地址。
+- Cloudflare Pages Function 固定入口：`pages.dev` 密码门 + 出图应用口令，Worker 作为隧道地址状态源和备用入口。
 
 ## 目录结构
 
@@ -51,6 +51,9 @@
 │  ├─ src/index.js               # 密码门、KV、代理与错误页
 │  ├─ test/smoke.mjs             # 本地网关测试
 │  └─ wrangler.toml
+├─ pages-gateway/                # pages.dev 固定入口（独立 Pages 项目）
+│  ├─ functions/[[path]].js      # 密码门、Worker 地址读取与代理
+│  └─ public/
 ├─ scripts/
 │  ├─ serve.mjs                  # 无依赖本地静态服务器
 │  ├─ verify.mjs                 # 静态检查
@@ -149,7 +152,7 @@ http://127.0.0.1:4174
 
 当前默认值：
 
-- AI 生图专项：`https://tingye-ai-image.826t6km2n4.workers.dev/`
+- AI 生图专项：`https://tingye-ai-image.pages.dev/`
 - Codex：`https://chatgpt.com/codex`
 - ComfyUI、个人知识库、项目档案、项目资料、场地研究、案例参考：留空
 
@@ -255,23 +258,27 @@ npx wrangler pages deploy dist --project-name tingye-portal
 
 专题页：<https://tingye-portal.pages.dev/ai-image.html>
 
-工作台固定入口：<https://tingye-ai-image.826t6km2n4.workers.dev/>
+工作台固定入口：<https://tingye-ai-image.pages.dev/>
+
+备用入口：<https://tingye-ai-image.826t6km2n4.workers.dev/>（部分国内网络会拦截 `workers.dev`）
 
 完整链路：
 
 ```text
 浏览器
-  → tingye-ai-image.826t6km2n4.workers.dev
-  → Cloudflare Worker（访问密码 + 签名 Cookie）
+  → tingye-ai-image.pages.dev
+  → Cloudflare Pages Function（访问密码 + 签名 Cookie）
+  → Worker 管理接口读取当前 quick tunnel
   → quick tunnel（每次启动自动更新）
   → 本机 http://127.0.0.1:8787
   → 本机 ComfyUI http://127.0.0.1:8000
 ```
 
-Worker 源码在 `worker/ai-image-proxy/`，不进入 `src/` 或 `dist/`。它使用 KV `TUNNEL_STATE` 保存当前 quick tunnel 地址，并通过以下接口工作：
+Pages Function 源码在 `pages-gateway/`；Worker 源码在 `worker/ai-image-proxy/`，两者都不进入 `src/` 或 `dist/`。Worker 使用 KV `TUNNEL_STATE` 保存当前 quick tunnel 地址，并通过以下接口工作：
 
 - `GET/POST /__gate`：Worker 访问密码与 30 天签名 Cookie。
 - `GET /__health`：返回是否已配置隧道，不暴露隧道地址。
+- `GET /__admin/tunnel`：凭管理令牌读取当前隧道地址，供 Pages Function 使用。
 - `PUT /__admin/tunnel`：凭管理令牌更新或清空隧道地址。
 - 其余请求：校验 Cookie 后代理到本机工作台，包括登录、上传、任务轮询、图片和 PWA 资源。
 
@@ -297,7 +304,14 @@ Worker Secrets 为 `GATE_PASSWORD`、`GATE_SECRET`、`ADMIN_TOKEN`。修改密�
 node test/smoke.mjs
 ```
 
-`workers.dev` 不提供 Cloudflare Access 邮箱验证，因此当前采用 Worker 密码 + 出图应用口令两层保护。若以后接入自己的域名，可在 Worker 前增加 Cloudflare Access。
+Pages 网关部署：
+
+```powershell
+cd pages-gateway
+npx wrangler pages deploy public --project-name tingye-ai-image --branch main
+```
+
+Pages 项目 Secrets 同样为 `GATE_PASSWORD`、`GATE_SECRET`、`ADMIN_TOKEN`。当前采用 Pages 访问密码 + 出图应用口令两层保护。若以后接入自己的域名，可在 Pages 或 Worker 前增加 Cloudflare Access。
 
 ## 安全边界
 

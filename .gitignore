@@ -4,6 +4,9 @@ worker/**/.dev.vars
 worker/**/.wrangler/
 worker/**/*.token
 worker/**/.secret-bulk.json
+pages-gateway/.dev.vars
+pages-gateway/.wrangler/
+pages-gateway/.pages-secrets
 .DS_Store
 Thumbs.db
 *.log

@@ -1,6 +1,6 @@
-# AI 生图固定入口 Worker
+# AI 生图入口 Worker（状态源与备用入口）
 
-把本机出图工作台的临时 Cloudflare quick tunnel 包装成一个固定地址：
+主入口是 `https://tingye-ai-image.pages.dev/`，由 `pages-gateway/` 的 Pages Function 提供。这个 Worker 负责保存当前隧道地址，并保留为 `workers.dev` 备用入口：
 
 ```text
 https://tingye-ai-image.826t6km2n4.workers.dev
@@ -21,6 +21,7 @@ Worker 负责访问密码、Cookie、KV 中的隧道地址和反向代理；出�
 | `GET /__gate` | 访问密码页面 |
 | `POST /__gate` | 校验密码，写入 30 天签名的 `tingye_gate` Cookie |
 | `GET /__health` | `{ ok, configured, updatedAt }`，不返回隧道地址 |
+| `GET /__admin/tunnel` | 凭管理令牌读取当前隧道地址，供 Pages Function 使用 |
 | `PUT /__admin/tunnel` | `Authorization: Bearer <ADMIN_TOKEN>`；写入或清空 quick tunnel |
 | 其他路径 | 校验 Cookie 后代理到本机 `8787` |
 
