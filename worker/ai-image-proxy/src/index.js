@@ -204,6 +204,15 @@ async function proxyRequest(request, env, url) {
     return errorPage(502, "无法连接本机工作台", "隧道可能已经断开，或本机服务没有启动。");
   }
 
+  if (upstream.status === 530) {
+    return errorPage(
+      503,
+      "隧道地址已失效",
+      "本机隧道已经更换。重新启动公网工作台后，这个固定地址会自动恢复。",
+      { "Retry-After": "30" }
+    );
+  }
+
   const responseHeaders = new Headers();
   for (const [name, value] of upstream.headers) {
     const lower = name.toLowerCase();
