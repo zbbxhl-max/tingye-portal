@@ -314,7 +314,7 @@ npx wrangler pages deploy public --project-name tingye-ai-image --branch main
 
 Pages 项目 Secrets 同样为 `GATE_PASSWORD`、`GATE_SECRET`、`ADMIN_TOKEN`。当前采用 Pages 访问密码 + 出图应用口令两层保护。若以后接入自己的域名，可在 Pages 或 Worker 前增加 Cloudflare Access。
 
-公网守护已注册到当前用户的 Windows 启动目录：登录后会自动运行 `启动公网守护.vbs`。如需停用，双击 `停止公网守护.vbs`，并删除启动目录中的 `Tingye AI Image Gateway.vbs`。
+公网守护已注册到当前用户的 Windows Run 启动项 `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\TingyeAIImageGateway`：登录后会自动运行 `watch-public.ps1`。如需停用，双击 `停止公网守护.vbs`，并删除该 Run 值。
 
 ## 安全边界
 
