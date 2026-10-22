@@ -289,6 +289,7 @@ Pages Function 源码在 `pages-gateway/`；Worker 源码在 `worker/ai-image-pr
 - `D:\AI生图专项\网页\启动公网工作台.vbs`：启动网页、等待 8787、启动隧道、发布地址并打开固定入口。
 - `D:\AI生图专项\网页\停止公网工作台.vbs`：关闭隧道并通知 Worker 清空地址。
 - `D:\AI生图专项\网页\启动公网守护.vbs`：在后台每 30 秒检查网页、隧道和地址，掉线时自动重启并重新发布。
+- `D:\AI生图专项\网页\watch-public-supervisor.vbs`：守护进程本身退出时自动重新拉起，避免一次异常后永久失守。
 - `D:\AI生图专项\网页\tools\remote.ps1`：检测 quick tunnel，调用 Worker 管理接口并轮询 `/__health`。
 - `D:\AI生图专项\网页\tools\worker-public.json`：Worker 地址与管理令牌文件名。
 - `D:\AI生图专项\网页\tools\worker-gate.txt` 和 `worker-admin.token`：只保存在本机的访问密码与管理令牌，不提交到 Git。
@@ -316,7 +317,7 @@ npx wrangler pages deploy public --project-name tingye-ai-image --branch main
 
 Pages 项目 Secrets 同样为 `GATE_PASSWORD`、`GATE_SECRET`、`ADMIN_TOKEN`。当前采用 Pages 访问密码 + 出图应用口令两层保护。若以后接入自己的域名，可在 Pages 或 Worker 前增加 Cloudflare Access。
 
-公网守护已注册到当前用户的 Windows Run 启动项 `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\TingyeAIImageGateway`：登录后会自动运行 `watch-public.ps1`。如需停用，双击 `停止公网守护.vbs`，并删除该 Run 值。
+公网守护已注册到当前用户的 Windows Run 启动项 `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\TingyeAIImageGateway`：登录后会通过 `watch-public-supervisor.vbs` 自动运行守护。如需停用，双击 `停止公网守护.vbs`，并删除该 Run 值。
 
 ## 安全边界
 
