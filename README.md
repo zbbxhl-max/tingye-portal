@@ -262,6 +262,8 @@ npx wrangler pages deploy dist --project-name tingye-portal
 
 备用入口：<https://tingye-ai-image.826t6km2n4.workers.dev/>（部分国内网络会拦截 `workers.dev`）
 
+私有 Tailscale 直连：<http://100.99.235.92:8787/>（设备名 `xps-8950`，仅同一 tailnet 内设备可用，不经过 Cloudflare）。
+
 完整链路：
 
 ```text

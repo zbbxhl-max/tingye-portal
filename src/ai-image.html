@@ -72,9 +72,16 @@
                 打开出图工作台 <span aria-hidden="true">↗</span>
               </a>
               <a class="button button--quiet" href="#lab-flow">查看工作流</a>
+              <a
+                class="button button--quiet"
+                href="http://100.99.235.92:8787/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Tailscale 直连</a>
             </div>
             <p class="lab-hero__note">
-              公网入口需要登录；电脑与隧道在线时可用。页面不保存口令，也不展示真实服务状态。
+              公网入口需要登录；Tailscale 直连仅对同一 tailnet 设备可用
+              （xps-8950 · 100.99.235.92:8787），不经过 Cloudflare。页面不保存口令。
             </p>
           </div>
           <figure class="lab-frame lab-frame--hero">
